@@ -1,0 +1,461 @@
+{
+  "contractName": "Blockchaincasino",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_PIE",
+          "type": "string"
+        }
+      ],
+      "name": "setPI",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPI",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "Welcome",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6103518061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633d6979621461005c578063aadaeef7146100b9578063d41d385b14610147575b600080fd5b341561006757600080fd5b6100b7600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061015c565b005b34156100c457600080fd5b6100cc610176565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561010c5780820151818401526020810190506100f1565b50505050905090810190601f1680156101395780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561015257600080fd5b61015a61021e565b005b806000908051906020019061017292919061026c565b5050565b61017e6102ec565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102145780601f106101e957610100808354040283529160200191610214565b820191906000526020600020905b8154815290600101906020018083116101f757829003601f168201915b5050505050905090565b6040805190810160405280601d81526020017f48656c6c6f20746869732077696c6c206769766520796f75205049452e0000008152506000908051906020019061026992919061026c565b50565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102ad57805160ff19168380011785556102db565b828001600101855582156102db579182015b828111156102da5782518255916020019190600101906102bf565b5b5090506102e89190610300565b5090565b602060405190810160405280600081525090565b61032291905b8082111561031e576000816000905550600101610306565b5090565b905600a165627a7a72305820fea994ca2b32a346c2561ee2de993ec67ec978777b973620c72157401789f5f20029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633d6979621461005c578063aadaeef7146100b9578063d41d385b14610147575b600080fd5b341561006757600080fd5b6100b7600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061015c565b005b34156100c457600080fd5b6100cc610176565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561010c5780820151818401526020810190506100f1565b50505050905090810190601f1680156101395780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561015257600080fd5b61015a61021e565b005b806000908051906020019061017292919061026c565b5050565b61017e6102ec565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102145780601f106101e957610100808354040283529160200191610214565b820191906000526020600020905b8154815290600101906020018083116101f757829003601f168201915b5050505050905090565b6040805190810160405280601d81526020017f48656c6c6f20746869732077696c6c206769766520796f75205049452e0000008152506000908051906020019061026992919061026c565b50565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102ad57805160ff19168380011785556102db565b828001600101855582156102db579182015b828111156102da5782518255916020019190600101906102bf565b5b5090506102e89190610300565b5090565b602060405190810160405280600081525090565b61032291905b8082111561031e576000816000905550600101610306565b5090565b905600a165627a7a72305820fea994ca2b32a346c2561ee2de993ec67ec978777b973620c72157401789f5f20029",
+  "sourceMap": "28:262:0:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "28:262:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;156:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;218:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;76:76:0;;;;;;;;;;;;;;156:58;204:4;198:3;:10;;;;;;;;;;;;:::i;:::-;;156:58;:::o;218:69::-;256:6;;:::i;:::-;278:3;271:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;218:69;:::o;76:76::-;109:37;;;;;;;;;;;;;;;;;;:3;:37;;;;;;;;;;;;:::i;:::-;;76:76::o;28:262::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\r\n\r\ncontract Blockchaincasino {\r\n  string PIE;\r\n\r\n  function Welcome() public {\r\n    PIE = \"Hello this will give you PIE.\";\r\n  }\r\n  function setPI(string _PIE) public {\r\n    PIE = _PIE;\r\n  }\r\n  function getPI() public view returns (string) {\r\n    return PIE;\r\n  }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\jerem\\chainjeremy\\blockchaincasino\\casino\\contracts\\Blockchaincasino.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/Users/jerem/chainjeremy/blockchaincasino/casino/contracts/Blockchaincasino.sol",
+      "exportedSymbols": {
+        "Blockchaincasino": [
+          30
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            30
+          ],
+          "name": "Blockchaincasino",
+          "scope": 31
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "PIE",
+              "scope": 30,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string storage ref",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string storage pointer"
+                },
+                "id": 2,
+                "name": "ElementaryTypeName",
+                "src": "59:6:0"
+              }
+            ],
+            "id": 3,
+            "name": "VariableDeclaration",
+            "src": "59:10:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "Welcome",
+              "payable": false,
+              "scope": 30,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4,
+                "name": "ParameterList",
+                "src": "92:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5,
+                "name": "ParameterList",
+                "src": "102:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 3,
+                              "type": "string storage ref",
+                              "value": "PIE"
+                            },
+                            "id": 6,
+                            "name": "Identifier",
+                            "src": "109:3:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "48656c6c6f20746869732077696c6c206769766520796f75205049452e",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Hello this will give you PIE.\"",
+                              "value": "Hello this will give you PIE."
+                            },
+                            "id": 7,
+                            "name": "Literal",
+                            "src": "115:31:0"
+                          }
+                        ],
+                        "id": 8,
+                        "name": "Assignment",
+                        "src": "109:37:0"
+                      }
+                    ],
+                    "id": 9,
+                    "name": "ExpressionStatement",
+                    "src": "109:37:0"
+                  }
+                ],
+                "id": 10,
+                "name": "Block",
+                "src": "102:50:0"
+              }
+            ],
+            "id": 11,
+            "name": "FunctionDefinition",
+            "src": "76:76:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "setPI",
+              "payable": false,
+              "scope": 30,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_PIE",
+                      "scope": 21,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 12,
+                        "name": "ElementaryTypeName",
+                        "src": "171:6:0"
+                      }
+                    ],
+                    "id": 13,
+                    "name": "VariableDeclaration",
+                    "src": "171:11:0"
+                  }
+                ],
+                "id": 14,
+                "name": "ParameterList",
+                "src": "170:13:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15,
+                "name": "ParameterList",
+                "src": "191:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 3,
+                              "type": "string storage ref",
+                              "value": "PIE"
+                            },
+                            "id": 16,
+                            "name": "Identifier",
+                            "src": "198:3:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13,
+                              "type": "string memory",
+                              "value": "_PIE"
+                            },
+                            "id": 17,
+                            "name": "Identifier",
+                            "src": "204:4:0"
+                          }
+                        ],
+                        "id": 18,
+                        "name": "Assignment",
+                        "src": "198:10:0"
+                      }
+                    ],
+                    "id": 19,
+                    "name": "ExpressionStatement",
+                    "src": "198:10:0"
+                  }
+                ],
+                "id": 20,
+                "name": "Block",
+                "src": "191:23:0"
+              }
+            ],
+            "id": 21,
+            "name": "FunctionDefinition",
+            "src": "156:58:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getPI",
+              "payable": false,
+              "scope": 30,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 22,
+                "name": "ParameterList",
+                "src": "232:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 29,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 23,
+                        "name": "ElementaryTypeName",
+                        "src": "256:6:0"
+                      }
+                    ],
+                    "id": 24,
+                    "name": "VariableDeclaration",
+                    "src": "256:6:0"
+                  }
+                ],
+                "id": 25,
+                "name": "ParameterList",
+                "src": "255:8:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 25
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 3,
+                          "type": "string storage ref",
+                          "value": "PIE"
+                        },
+                        "id": 26,
+                        "name": "Identifier",
+                        "src": "278:3:0"
+                      }
+                    ],
+                    "id": 27,
+                    "name": "Return",
+                    "src": "271:10:0"
+                  }
+                ],
+                "id": 28,
+                "name": "Block",
+                "src": "264:23:0"
+              }
+            ],
+            "id": 29,
+            "name": "FunctionDefinition",
+            "src": "218:69:0"
+          }
+        ],
+        "id": 30,
+        "name": "ContractDefinition",
+        "src": "28:262:0"
+      }
+    ],
+    "id": 31,
+    "name": "SourceUnit",
+    "src": "0:292:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x506646c199765517aabb8d987dc4284d57dd5493"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2021-03-19T20:53:12.996Z"
+}

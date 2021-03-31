@@ -4,13 +4,20 @@
   margin-right: auto;
 }
 
-
+.chps
+{
+font-size: 40px;
+display: block;
+margin-left: 15%;
+}
 .center{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+
 }
 
-body {
+.body {
   background-color: #016938;
 }

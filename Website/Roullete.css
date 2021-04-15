@@ -1,0 +1,272 @@
+:root
+{
+--value: 0deg;
+}
+.image {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.play
+{
+left:260px;
+top:650px;
+position: absolute;
+}
+.chps
+{
+font-size: 40px;
+position: absolute;
+left:670px;
+top:150px;
+}
+.numchips{
+  position:relative;
+  left: 110px;
+  top: -85px;
+}
+.betplaced{
+  position:relative;
+  left: 250px;
+  top: -170px;
+}
+.amountBet{
+  position: absolute;
+  left: 430px;
+  top: -38px;
+
+}
+.sphere
+{
+  width:12px;
+  height:12px;
+  left: 281px;
+  top: 397px;
+  position: absolute;
+  animation: orbit cubic-bezier(0,0,.2,1) 10s;
+  animation-fill-mode: forwards;
+  background: white;
+  border-radius: 50%;
+  border-color: black;
+}
+.table
+{
+left: 650px;
+top: 220px;
+width: 847px;
+height: 439px;
+position:absolute;
+}
+.center
+{
+  left: 100px;
+  top: 225px;
+  position: absolute;
+  width: 376px;
+  height: 353;
+}
+body {
+  background-color: #016600;
+}
+@keyframes orbit
+{
+from { 	transform: rotate(0deg) translateX(150px); }
+to   {  transform: rotate(calc( var(--value) * 1deg)) translateX(85px); }
+}
+.zero
+{
+background:none;
+width:45px;
+height:133px;
+}
+.single{
+  background: none;
+  width:47px;
+  height:75px;
+}
+.single1{
+  background: none;
+  width:51px;
+  height:70px;
+}
+.two
+{
+background: blue;
+width:47px;
+height:20px;
+border-width:0px
+}
+.two1
+{
+background: blue;
+width:10px;
+height:75px;
+border-width:0px
+}
+.four{
+  background:green;
+  width:10px;
+  height:20px;
+  border-width: 0px
+}
+.doz{
+  background: none;
+  width:235px;
+  height: 53px;
+
+}
+
+.BB{
+  background: none;
+  width:117px;
+  height: 53px;
+
+}
+.col{
+  background:none;
+  width:56;
+  height:88 ;
+}
+.zeros
+{
+  display:grid;
+  grid-template-rows: repeat(2  ,1fr);
+  position:absolute;
+  height:269px;
+  left:670px;
+  top:232px;
+
+}
+
+.singletop{
+  position:absolute;
+  display:grid;
+  grid-template-columns: repeat(12  ,1fr);
+  width: 712px;
+    left: 718px;
+    top: 233px;
+}
+.singlemid{
+  position:absolute;
+  display:grid;
+  grid-template-columns: repeat(12 ,1fr);
+  width: 712px;
+    left: 718px;
+    top: 330px;
+}
+.singlebot{
+  position:absolute;
+  display:grid;
+  grid-template-columns: repeat(12  ,1fr);
+  width: 712px;
+    left: 718px;
+    top: 420px;
+}
+.dozen{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  position:relative;
+  width:702px;
+  left:711px;
+  top:440px;
+}
+.bottombets
+{
+  display:grid;
+  grid-template-columns: repeat(6,1fr);
+  position:relative;
+  width:705px;
+  left:711px;
+  top:545px;
+
+}
+.column
+{
+  display:grid;
+  grid-template-rows: repeat(3,1fr);
+  position:absolute;
+  height: 262px;
+  left:1425px;
+  top:233px;
+}
+.twonumtop
+{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  position:relative;
+  top:-69px;
+}
+.twonummid{
+
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+
+}
+.twonumbotom
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    position:relative;
+    top:69px;
+
+}
+.twonumbetsV{
+  width: 707px;
+  top:336px;
+  left:770px;
+  position: absolute;
+  z-index: 1;
+}
+.twonumtopH
+{
+    display: grid;
+    grid-template-columns: repeat(24,1fr);
+    position:relative;
+    top:64px;
+    left:-28px;
+}
+
+.twonumbotH
+{
+    display: grid;
+    grid-template-columns: repeat(24,2fr);
+    position:relative;
+    top:-45px;
+    left:-28px;
+}
+.twonumbetsH{
+  display: grid;
+  grid-template-columns: repeat(23,1fr);
+  width: 698px;
+  top:232px;
+  left:721px;
+  position: absolute;
+  z-index: 1;
+}
+.fourbets
+{
+  width: 704px;
+  height: 439px;
+  top:356px;
+  left:799px;
+  position: absolute;
+  z-index: 1;
+}
+.fourbets1
+{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  position:relative;
+  top:-45px;
+  left:-28px;
+}
+
+.fourbets2
+{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  position:relative;
+  top:25px;
+  left:-28px;
+}

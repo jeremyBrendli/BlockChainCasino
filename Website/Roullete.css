@@ -96,8 +96,9 @@ height:133px;
 }
 .single{
   background: none;
-  width:47px;
+  width:44.5px;
   height:75px;
+  border-width: 1px;
 }
 .single1{
   background: none;
@@ -106,23 +107,23 @@ height:133px;
 }
 .two
 {
-border-width: 1px
-width:47px;
+background: none;
+width:44.6px;
 height:20px;
-border-width:2px
+border-width:1px;
 }
 .two1
 {
-background: blue;
-width:10px;
+background: none;
+width:11px;
 height:75px;
-border-width:0px
+border-width:1px;
 }
 .four{
-  background:green;
-  width:10px;
+  background:none;
+  width:3px;
   height:20px;
-  border-width: 0px
+  border-width: 1px;
 }
 .doz{
   background: none;
@@ -148,7 +149,7 @@ border-width:0px
   grid-template-rows: repeat(2  ,1fr);
   position:absolute;
   height:269px;
-  left:670px;
+  left:673px;
   top:232px;
 
 }
@@ -270,9 +271,9 @@ border-width:0px
 .twonumbetsH{
   display: grid;
   grid-template-columns: repeat(23,1fr);
-  width: 698px;
-  top:232px;
-  left:721px;
+  width: 675px;
+  top:233px;
+  left:727.4px;
   position: absolute;
   z-index: 1;
 }

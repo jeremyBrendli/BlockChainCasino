@@ -1,0 +1,293 @@
+<html>
+<head>
+<title>Roullete</title>
+<link rel="stylesheet" href= "Roullete.css">
+<script src="Roullete.js"> </script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+function getRandomInt(min, max) {
+    var byteArray = new Uint8Array(1);
+    window.crypto.getRandomValues(byteArray);
+    var range = max - min + 1;
+    var max_range = 256;
+    if (byteArray[0] >= Math.floor(max_range / range) * range)
+        return getRandomInt(min, max);
+    return min + (byteArray[0] % range);
+}
+</script>
+
+<script>
+var r = document.querySelector(':root');
+var chips = 0;
+function moreChips(val)
+{
+  setChips(val);
+//add more chips to the game so they can bet more
+}
+function ani(){
+    document.getElementById("play").disabled = true;
+    setTimeout(enable,10000);
+    var el = document.getElementById('S');
+    el.classList.remove("sphere");
+    void el.offsetWidth;
+    var num = getRandomInt(0,37);
+    var spin = num;
+    num = ((num * 9.47))+ (355.28+1080);
+    r.style.setProperty('--value', num);
+    el.classList.add("sphere");
+
+
+  }
+function enable(value){
+  document.getElementById("play").disabled = false;
+  document.getElementById("amountBet").innerHTML = 0;
+  document.getElementById("winnings").innerHTML = 0;
+}
+function placeBet(value){
+  var el = document.getElementById("amountBet");
+  if( Number(localStorage.chips) != 0){
+  if(document.getElementById("one").checked){
+    if( (Number(localStorage.chips) - 1) < 0){
+      window.alert("need more chips");
+    }else{
+    el.innerHTML = (Number(el.innerHTML) +1);
+    setChips(-1);
+    }
+  }else{
+      if( (Number(localStorage.chips) - 5) < 0){
+        window.alert("need more chips");
+      }
+      else{
+
+        el.innerHTML = (Number(el.innerHTML) +5);
+        setChips(-5);
+          }
+
+      }
+}
+else{
+  window.alert("need more chips");
+}
+}
+
+
+</script>
+</head>
+<body>
+
+
+
+<div class = "chps">
+  Chips:
+  <p id = "numchips" class = "numchips"> 10
+    <p id = "betplaced" class = "betplaced">bet placed:
+      <p id = "amountBet" class = "amountBet">0
+        <p id = "win" class = "winningnums" > Winnings:
+          <p id = "win" class = "winnings" >0 </p> </p> </p> </p>
+</div>
+<div id = "S"> </div>
+<img tag = "wheel" src= "Images/wheel.png" class = "center">
+<img tag = "table" src="Images/table.jpg" class = "table">
+<button id= 'play' class = "play" value="3" onclick="ani()" >Play</button>
+<div class='box'></div>
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large w3-green">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Roullete</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-green">Poker</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-green">Slots</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-green">Blackjack</a>
+  </div>
+<div id ="s" class="s"></div>
+
+<div class ="column">
+  <button class ="col" value = "2" onclick="placeBet(this.value)" ></button>
+  <button class ="col" value = "1" onclick="placeBet(this.value)" ></button>
+  <button class ="col" value = "0" onclick="placeBet(this.value)" ></button>
+</div>
+
+<div class ="bottombets">
+  <button class = "BB" value = "0" onclick="placeBet(this.value)"></button> <!-- 1-18 -->
+  <button class = "BB" value = "0" onclick="placeBet(this.value)"></button> <!-- even -->
+  <button class = "BB" value = "0" onclick="placeBet(this.value)"></button> <!-- red -->
+  <button class = "BB" value = "1" onclick="placeBet(this.value)"></button> <!-- black -->
+  <button class = "BB" value = "1" onclick="placeBet(this.value)"></button> <!-- odd -->
+  <button class = "BB" value = "1" onclick="placeBet(this.value)"></button> <!-- 19-36 -->
+</div>
+<div class ="dozen">
+  <button class ="doz" value ="0" onclick="placeBet(this.value)"></button><!-- first 12 -->
+  <button class ="doz" value ="1" onclick="placeBet(this.value)"></button><!-- second -->
+  <button class ="doz" value = "2" onclick="placeBet(this.value)"></button><!-- third -->
+</div>
+
+<div class = "twonumbetsH">
+
+
+<button class ="single"  value = "3" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "46" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "6" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "47" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "9" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "48" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "12" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "49" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "15" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "50" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "18" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "51" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "21" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "52" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "24" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "53" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "27" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "54" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "30" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "55" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "30" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "56" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "36" onclick="placeBet(this.value)"></button>
+
+<button class ="two" value = "11" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "11" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "12" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "12" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "13" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "13" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "14" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "14" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "15" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "15" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "16" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "16" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "17" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "17" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "18" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "18" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "19" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "19" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "20" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "20" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "21" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "21" onclick="placeBet(this.value)"></button>
+<button class ="two" value = "22" onclick="placeBet(this.value)"></button>
+
+<button class ="single" value = "2" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "35" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "5" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "36" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "8" onclick="placeBet(this.value)"></button>
+<button class ="two1"  value = "37" onclick="placeBet(this.value)"></button>
+<button class ="single"  value = "11" onclick="placeBet(this.value)"></button>
+<button class ="two1"  value = "38" onclick="placeBet(this.value)"></button>
+<button class ="single"  value = "14" onclick="placeBet(this.value)"></button>
+<button class ="two1"  value = "39" onclick="placeBet(this.value)"></button>
+<button class ="single"  value = "17" onclick="placeBet(this.value)"></button>
+<button class ="two1"  value = "40" onclick="placeBet(this.value)"></button>
+<button class ="single"  value = "20" onclick="placeBet(this.value)"></button>
+<button class ="two1"  value = "41" onclick="placeBet(this.value)"></button>
+<button class ="single"  value = "23" onclick="placeBet(this.value)"></button>
+<button class ="two1"  value = "42" onclick="placeBet(this.value)"></button>
+<button class ="single"  value = "26" onclick="placeBet(this.value)"></button>
+<button class ="two1"  value = "43" onclick="placeBet(this.value)"></button>
+<button class ="single"  value = "29" onclick="placeBet(this.value)"></button>
+<button class ="two1"  value = "44" onclick="placeBet(this.value)"></button>
+<button class ="single"  value = "32" onclick="placeBet(this.value)"></button>
+<button class ="two1"  value = "45" onclick="placeBet(this.value)"></button>
+<button class ="single"  value = "35" onclick="placeBet(this.value)"></button>
+
+<button class ="two"  value = "0" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "11" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "2" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "12" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "3" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "13" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "4" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "14" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "5" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "15" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "6" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "16" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "7" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "17" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "8" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "18" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "9" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "19" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "10" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "20" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "11" onclick="placeBet(this.value)"></button>
+<button class ="four" value = "21" onclick="placeBet(this.value)"></button>
+<button class ="two"  value = "12" onclick="placeBet(this.value)"></button>
+
+<button class ="single" value = "1" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "24" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "4" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "25" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "7" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "26" onclick="placeBet(this.value)"></button>
+<button class ="single"value = "10" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "27" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "13" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "28" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "16" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "29" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "19" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "30" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "22" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "31" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "25" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "32" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "28" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "33" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "31" onclick="placeBet(this.value)"></button>
+<button class ="two1" value = "34" onclick="placeBet(this.value)"></button>
+<button class ="single" value = "34" onclick="placeBet(this.value)"></button>
+</div>
+
+<div class = "zeros">
+<button class = "zero" value ="37" onclick="placeBet(this.value)"></button> <!-- double zero -->
+<button class = "zero" value ="0" onclick="placeBet(this.value)"></button> <!-- zero -->
+</div>
+<div class = "morechips">
+<button class ="buymorered" value ="1" onclick="setChips(1)">1 chip</button>
+<button class ="buymoreblack" value ="5" onclick="setChips(5)">5 chips</button>
+<button class ="buymorered" value ="10" onclick="setChips(10)">10 chips</button>
+<button class ="buymoreblack" value ="25" onclick="setChips(25)">25 chips</button>
+</div>
+<div class ="betamount">
+<p> Select the amount of chips to bet at one time </p>
+<input type="radio" id="one" name="bet" checked="checked" value="1">
+  <label for="male">One Chip</label><br>
+  <input type="radio" id="five" name="bet" value="5">
+  <label for="female">Five Chips</label><br>
+</div>
+
+<script>
+if(Number(localStorage.chips) > 0){
+  document.getElementById("numchips").innerHTML = localStorage.chips;
+}else{
+  document.getElementById("numchips").innerHTML = 0;
+  localStorage.chips = 0;
+
+}
+function setChips(newchip){
+if (typeof(Storage) !== "undefined") {
+  // Store
+  if(localStorage.chips)
+  {
+    localStorage.chips = Number(localStorage.chips) + newchip;
+  }
+  else{
+     localStorage.chips = newchip;
+   }
+   document.getElementById("numchips").innerHTML = localStorage.chips;
+}
+}
+</script>
+</body>
+</html>

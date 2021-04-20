@@ -3,6 +3,7 @@ pragma solidity ^0.4.18;
 contract Blockchaincasino
 {
 uint chips = 10;
+uint money=0;
 uint i;
 uint[2] redblack = [0];
 uint[2] evenodd = [0];
@@ -113,7 +114,7 @@ uint roll;
     return ( (columns[number] * 2) + columns[number]);
     }else if((keccak256(bet) == keccak256("sixnum")))
     {
-    return ( (six[number] * 5) + size[number]);
+    return ( (six[number] * 5) + six[number]);
     }
     else if((keccak256(bet) == keccak256("fournum")))
     {
@@ -126,7 +127,7 @@ uint roll;
     return ( (two[number] * 17) + two[number]);
     }else if((keccak256(bet) == keccak256("single")))
     {
-    return ( (single[number] * 35) + sigle[number]);
+    return ( (single[number] * 35) + single[number]);
     }
     }
     function test(uint a) public view returns (uint)

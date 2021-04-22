@@ -1,0 +1,224 @@
+<html>
+<link rel="stylesheet" href= "Roullete.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="Roullete.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<title>Roullete</title>
+</head>
+<body>
+
+
+<p id="sss"></p>
+<div class = "chps">
+  Chips:
+  <p id = "numchips" class = "numchips"> 10
+    <p id = "betplaced" class = "betplaced">bet placed:
+      <p id = "amountBet" class = "amountBet">0
+        <p id = "wining" class = "winningnums" > Winnings:
+          <p id = "win" class = "winnings" >0</p> </p> </p> </p>
+</div>
+<div id = "S"> </div>
+<img tag = "wheel" src= "Images/wheel.png" class = "center">
+<img tag = "table" src="Images/table.jpg" class = "table">
+<button id= 'play' class = "play" value="3" onclick="ani()" >Play </button>
+<button class = "payout" onclick="App.Payout()"> payout</button>
+<div class='box'></div>
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large w3-green">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Roulette</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-green">Poker</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-green">Slots</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-green">Blackjack</a>
+    <a id="accountAddress" class="w3-bar-item w3-hide-small w3-padding-large w3-green">Account Null</a>
+    <a id="accountamount" class="w3-bar-item  w3-hide-small w3-padding-large w3-green">Wallet</a>
+  </div>
+<div id ="s" class="s"></div>
+
+<div class ="column">
+  <button class ="col" value = "2" onclick="App.placeBet('col',this.value)" ></button>
+  <button class ="col" value = "1" onclick="App.placeBet('col',this.value)" ></button>
+  <button class ="col" value = "0" onclick="App.placeBet('col',this.value)" ></button>
+</div>
+
+<div class ="bottombets">
+  <button class = "BB" value = "0" onclick="App.placeBet('low',this.value)"></button> <!-- 1-18 -->
+  <button class = "BB" value = "0" onclick="App.placeBet('even',this.value)"></button> <!-- even -->
+  <button class = "BB" value = "0" onclick="App.placeBet('red',this.value)"></button> <!-- red -->
+  <button class = "BB" value = "1" onclick="App.placeBet('black',this.value)"></button> <!-- black -->
+  <button class = "BB" value = "1" onclick="App.placeBet('odd',this.value)"></button> <!-- odd -->
+  <button class = "BB" value = "1" onclick="App.placeBet('high',this.value)"></button> <!-- 19-36 -->
+</div>
+<div class ="dozen">
+  <button class ="doz" value ="0" onclick="App.placeBet('dozens',this.value)"></button><!-- first 12 -->
+  <button class ="doz" value ="1" onclick="App.placeBet('dozens',this.value)"></button><!-- second -->
+  <button class ="doz" value = "2" onclick="App.placeBet('dozens',this.value)"></button><!-- third -->
+</div>
+<div class ="threenum">
+  <!--three -->
+  <button class ="three" value = "0" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "1" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "2" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "3" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "4" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "5" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "6" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "7" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "8" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "9" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "10" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "11" onclick="App.placeBet('threenums',this.value)"></button>
+
+</div>
+<div class = "twonumbetsH">
+
+
+<button class ="single2"  value = "3" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "46" onclick="App.placeBet('twonums',this.value)"></button>
+<button class ="single" value = "6" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "47" onclick="App.placeBet('twonums',this.value)"></button>
+<button class ="single" value = "9" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "48" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "12" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "49" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "15" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "50" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "18" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "51" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "21" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "52" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "24" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "53" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "27" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "54" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "30" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "55" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "30" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "56" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single2" value = "36" onclick="App.placeBet('single',this.value)"></button>
+
+<button class ="two2" value = "11" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "11" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "12" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "12" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "13" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "13" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "14" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "14" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "15" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "15" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "16" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "16" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "17" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "17" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "18" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "18" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "19" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "19" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "20" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "20" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two" value = "21" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "21" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two2" value = "22" onclick="App.placeBet('townums',this.value)"></button>
+
+<button class ="single2" value = "2" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "35" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "5" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "36" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "8" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1"  value = "37" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single"  value = "11" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1"  value = "38" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single"  value = "14" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1"  value = "39" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single"  value = "17" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1"  value = "40" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single"  value = "20" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1"  value = "41" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single"  value = "23" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1"  value = "42" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single"  value = "26" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1"  value = "43" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single"  value = "29" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1"  value = "44" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single"  value = "32" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1"  value = "45" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single2"  value = "35" onclick="App.placeBet('single',this.value)"></button>
+
+<button class ="two2"  value = "0" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "11" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "2" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "12" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "3" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "13" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "4" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "14" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "5" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "15" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "6" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "16" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "7" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "17" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "8" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "18" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "9" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "19" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "10" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "20" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two"  value = "11" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="four" value = "21" onclick="App.placeBet('fournum',this.value)"></button>
+<button class ="two2"  value = "12" onclick="App.placeBet('townums',this.value)"></button>
+
+<button class ="single2" value = "1" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "24" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "4" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "25" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "7" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "26" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single"value = "10" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "27" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "13" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "28" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "16" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "29" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "19" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "30" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "22" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "31" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "25" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "32" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "28" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "33" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single" value = "31" onclick="App.placeBet('single',this.value)"></button>
+<button class ="two1" value = "34" onclick="App.placeBet('townums',this.value)"></button>
+<button class ="single2" value = "34" onclick="App.placeBet('single',this.value)"></button>
+
+
+</div>
+
+<div class = "zeros">
+<button class = "zero" value ="37" onclick="App.placeBet('single',this.value)"></button> <!-- double zero -->
+<button class = "zero" value ="0" onclick="App.placeBet('single',this.value)"></button> <!-- zero -->
+</div>
+<div class = "morechips">
+<button class ="buymorered" value ="1" onclick="App.Getmorechips(1)">1</button>
+<button class ="buymoreblack" value ="5" onclick="App.Getmorechips(5)">5</button>
+<button class ="buymorered" value ="10" onclick="App.Getmorechips(10)">10</button>
+<button class ="buymoreblack" value ="25" onclick="App.Getmorechips(25)">25</button>
+</div>
+<p class="buychiptext">Purchase More Chips</p>
+<div class ="betamount">
+<p> Select the amount of chips to bet at one time </p>
+<input type="radio" id="one" name="bet" checked="checked" value="1">
+  <label for="male">One Chip</label><br>
+  <input type="radio" id="five" name="bet" value="5">
+  <label for="female">Five Chips</label><br>
+</div>
+</body>
+</html>

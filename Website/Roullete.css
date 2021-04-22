@@ -13,6 +13,17 @@
 left:260px;
 top:650px;
 position: absolute;
+background-color:black;
+color: white;
+border-color: red;
+}
+.payout{
+  left:250px;
+  top:700px;
+  position: absolute;
+  background-color:black;
+  color: white;
+  border-color: red;
 }
 .chps
 {
@@ -105,6 +116,12 @@ height:133px;
   width:51px;
   height:70px;
 }
+.single2{
+  background: none;
+  width:49.5px;
+  height:75px;
+  border-width: 1px;
+}
 .two
 {
 background: none;
@@ -118,6 +135,28 @@ background: none;
 width:11px;
 height:75px;
 border-width:1px;
+}
+.two2
+{
+background: none;
+width:49.6px;
+height:20px;
+border-width:1px;
+}
+.threenum{
+  display:grid;
+  grid-template-columns: repeat(12  ,1fr);
+  position:absolute;
+  left:719px;
+  top:210px;
+  width:705px;
+
+}
+.three{
+  background: none;
+  width:58px;
+  height: 20px;
+  border-width: 1px;
 }
 .four{
   background:none;
@@ -167,10 +206,16 @@ border-width:1px;
   height: 50px;
   font-size: 20px;
 }
+.buychiptext{
+  position: absolute;
+  left: 711px;
+  top: 635px;
+  font-size: 20px;
+}
 .morechips{
   position: absolute;
   left: 711px;
-  top: 670px;
+  top: 700px;
 }
 .singletop{
   position:absolute;
@@ -273,7 +318,7 @@ border-width:1px;
   grid-template-columns: repeat(23,1fr);
   width: 675px;
   top:233px;
-  left:727.4px;
+  left:721.4px;
   position: absolute;
   z-index: 1;
 }

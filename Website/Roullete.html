@@ -1,19 +1,17 @@
 <html>
-<link rel="stylesheet" href= "Roullete.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href= "Roullete.css"><!-- css code  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery code  -->
 <script src="Roullete.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/web3.min.js"></script>
-<script src="js/truffle-contract.js"></script>
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="js/bootstrap.min.js"></script> <!-- bootstrap link  -->
+<script src="js/web3.min.js"></script> <!-- web3 code  -->
+<script src="js/truffle-contract.js"></script> <!-- truffle code  -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- w3schools css code  -->
 <head>
 <title>Roullete</title>
 </head>
 <body>
 
-
-<p id="sss"></p>
+<!-- below paragraph blocks are the data know by the player-->
 <div class = "chps">
   Chips:
   <p id = "numchips" class = "numchips"> 10
@@ -22,16 +20,18 @@
         <p id = "wining" class = "winningnums" > Winnings:
           <p id = "win" class = "winnings" >0</p> </p> </p> </p>
 </div>
+<!-- S div is the ball for roulette-->
 <div id = "S"> </div>
 <img tag = "wheel" src= "Images/wheel.png" class = "center">
 <img tag = "table" src="Images/table.jpg" class = "table">
-<button id= 'play' class = "play" value="3" onclick="ani()" >Play </button>
-<button class = "payout" onclick="App.Payout()"> payout</button>
-<div class='box'></div>
+<button id= 'play' class = "play" value="3" onclick="ani()" >Play </button><!-- button to play the game-->
+<button class = "payout" onclick="App.Payout()"> payout</button> <!--button to redeam your winnings for ether-->
+
+<!-- This div holds the upper navigation tab-->
 <div class="w3-top">
   <div class="w3-bar w3-green w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large w3-green">Home</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-green">Home</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Roulette</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-green">Poker</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-green">Slots</a>
@@ -40,7 +40,7 @@
     <a id="accountamount" class="w3-bar-item  w3-hide-small w3-padding-large w3-green">Wallet</a>
   </div>
 <div id ="s" class="s"></div>
-
+<!-- All the buttons below are the buttons neeed to place bets in roulette-->
 <div class ="column">
   <button class ="col" value = "2" onclick="App.placeBet('col',this.value)" ></button>
   <button class ="col" value = "1" onclick="App.placeBet('col',this.value)" ></button>
@@ -62,18 +62,18 @@
 </div>
 <div class ="threenum">
   <!--three -->
-  <button class ="three" value = "0" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "1" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "2" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "3" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "4" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "5" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "6" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "7" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "8" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "9" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "10" onclick="App.placeBet('threenums',this.value)"></button>
-  <button class ="three" value = "11" onclick="App.placeBet('threenums',this.value)"></button>
+  <button class ="three" value = "0" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "1" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "2" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "3" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "4" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "5" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "6" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "7" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "8" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "9" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "10" onclick="App.placeBet('threenums',this.value)">3</button>
+  <button class ="three" value = "11" onclick="App.placeBet('threenums',this.value)">3</button>
 
 </div>
 <div class = "twonumbetsH">
@@ -206,6 +206,7 @@
 <button class = "zero" value ="37" onclick="App.placeBet('single',this.value)"></button> <!-- double zero -->
 <button class = "zero" value ="0" onclick="App.placeBet('single',this.value)"></button> <!-- zero -->
 </div>
+<!--These buttons are to purchase more chips one chip is 1/100 ether-->
 <div class = "morechips">
 <button class ="buymorered" value ="1" onclick="App.Getmorechips(1)">1</button>
 <button class ="buymoreblack" value ="5" onclick="App.Getmorechips(5)">5</button>
@@ -213,6 +214,7 @@
 <button class ="buymoreblack" value ="25" onclick="App.Getmorechips(25)">25</button>
 </div>
 <p class="buychiptext">Purchase More Chips</p>
+<!--These are radio buttons used to decide how much chips to bet per click one or five-->
 <div class ="betamount">
 <p> Select the amount of chips to bet at one time </p>
 <input type="radio" id="one" name="bet" checked="checked" value="1">

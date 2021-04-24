@@ -4,6 +4,7 @@ contract Blockchaincasino
 {
 uint public chips;
 uint public winnings;
+uint public betsplaced;
 uint money = 0;
 uint i;
 uint[2] redblack = [0];
@@ -36,6 +37,7 @@ function MoreChips(uint amount) public payable{
 }
 function ClearWinnings() public {
   winnings = 0;
+  betsplaced = 0;
 }
   function setbet(uint _money, string bet, uint number) public returns (uint)
   {
@@ -46,54 +48,67 @@ function ClearWinnings() public {
         {
           redblack[0] = _money;
           chips -= _money;
+          betsplaced += _money;
         }else if( (keccak256(bet) == keccak256("black")))
         {
           redblack[1] = _money;
           chips -= _money;
+          betsplaced += _money;
         }else if((keccak256(bet) == keccak256("even")))
         {
             evenodd[0] = _money;
             chips -= _money;
+            betsplaced += _money;
         }else if((keccak256(bet) == keccak256("odd"))){
           evenodd[1] = _money;
           chips -= _money;
+          betsplaced += _money;
         }else if((keccak256(bet) == keccak256("low")))
         {
             lowhigh[0] = _money;
             chips -= _money;
+            betsplaced += _money;
         }else if((keccak256(bet) == keccak256("high")))
         {
           lowhigh[1] = _money;
           chips -= _money;
+          betsplaced += _money;
         }else if((keccak256(bet) == keccak256("dozens")))
         {
           dozens[number] = _money;
           chips -= _money;
+          betsplaced += _money;
         }else if((keccak256(bet) == keccak256("columns")))
         {
             columns[number] = _money;
             chips -= _money;
+            betsplaced += _money;
         }else if((keccak256(bet) == keccak256("sixnum")))
         {
             six[number] = _money;
             chips -= _money;
+            betsplaced += _money;
         }
         else if((keccak256(bet) == keccak256("fournum")))
         {
             four[number] = _money;
             chips -= _money;
+            betsplaced += _money;
         }else if((keccak256(bet) == keccak256("threenums")))
         {
             three[number] = _money;
             chips -= _money;
+            betsplaced += _money;
         }else if((keccak256(bet) == keccak256("twonums")))
         {
             two[number] = _money;
             chips -= _money;
+            betsplaced += _money;
         }else if((keccak256(bet) == keccak256("single")))
         {
             single[number] = _money;
             chips -= _money;
+            betsplaced += _money;
         }
       }
 

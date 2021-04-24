@@ -1,5 +1,5 @@
-var r = document.querySelector(':root');
-function getRandomInt(min, max) {
+var r = document.querySelector(':root'); //used to set a css variable
+function getRandomInt(min, max) { //used to find a random number between 0 and 37 to decide the winning number
     var byteArray = new Uint8Array(1);
     window.crypto.getRandomValues(byteArray);
     var range = max - min + 1;
@@ -9,16 +9,19 @@ function getRandomInt(min, max) {
     return min + (byteArray[0] % range);
 
 }
-
+function Test(){
+  document.getElementById("win").innerHTML = document.getElementById("win").innerHTML + "hello";
+}
+//the animation function that starts the animation for the ball
 function ani(){
     document.getElementById("play").disabled = true;
-    setTimeout(enable,10000);
-    var el = document.getElementById('S');
-    el.classList.remove("sphere");
-    void el.offsetWidth;
+    setTimeout(enable,10000); //waits 10s before enabling the button and running the play game function in the App
+    var el = document.getElementById('S'); //finds the ball
+    el.classList.remove("sphere"); //removes the sphere class to reset the animations
+    void el.offsetWidth; //resets the animations so it can play
     var num = getRandomInt(0,37);
     var spin = num;
-    num = ((num * 9.47))+ (355.28+1080);
+    num = ((num * 9.47))+ (355.28+1080); //sets where the ball is going to land and what degrees it will spin
     r.style.setProperty('--value', num);
     el.classList.add("sphere");
 
@@ -26,7 +29,7 @@ function ani(){
   }
 function enable(value){
   document.getElementById("play").disabled = false;
-  App.playgame(5);
+  App.playgame(value);
 }
 App = {
   web3Provider: null,
@@ -38,14 +41,12 @@ App = {
   },
 
   initWeb3: function() {
-    // TODO: refactor conditional
-
     if (typeof web3 !== 'undefined') {
       // If a web3 instance is already provided by Meta Mask.
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(App.web3Provider);
     } else {
-      // Specify default instance if no web3 instance provided
+      // use the local host if no meta mask
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
       web3 = new Web3(App.web3Provider);
     }
@@ -53,6 +54,7 @@ App = {
   },
 
   initContract: function() {
+    //find the appropriate infromation for the smart contract like abi
     $.getJSON("Blockchaincasino.json", function(casino) {
       // Instantiate a new truffle contract from the artifact
       App.contracts.Blockchaincasino = TruffleContract(casino);
@@ -64,8 +66,7 @@ App = {
     });
   },
 
-  // Listen for events emitted from the contract
-
+  //renders the appropriate data like account balance number chips winnings bets placed
   render: function() {
 
     web3.eth.getCoinbase(function(err, account) {
@@ -86,6 +87,15 @@ App = {
     });
     App.getChips();
     App.getWinnings();
+    App.getBetPlaced();
+  },
+  getBetPlaced: function(){
+    App.contracts.Blockchaincasino.deployed().then(function(instance){
+      instance.betsplaced().then(function(bets){
+        $("#amountBet").html(bets+"");
+      });
+    });
+
   },
   Getmorechips: function(moreChips){
 
@@ -99,7 +109,7 @@ App = {
               App.contracts.Blockchaincasino.deployed().then(function(instance){
                 web3.eth.sendTransaction({from:App.account,to:"0x8a12E78859A2C22BA7C82Faf13cdd007aA13E544",value:web3.toWei( (moreChips/100),"ether")});
                 instance.MoreChips(moreChips,{from: App.account});
-                App.getChips();
+                App.render();
 
 
               });
@@ -120,14 +130,14 @@ App = {
     var betplaced = document.getElementById("amountBet");
     App.contracts.Blockchaincasino.deployed().then(function(instance) {
       return instance.chips().then(function(chip){
-
+        instance.betsplaced().then(function(bets){
 
         if( (document.getElementById("one").checked) ){
         if( chip >= 1)
         {
         instance.setbet(1,bet,number,{from: App.account});
-        betplaced.innerHTML = (Number(betplaced.innerHTML) +1);
-        App.getChips();
+        betplaced.innerHTML = (bets);
+        App.render();
         }else{
 
         alert("not enough chips");
@@ -135,8 +145,8 @@ App = {
         }else{
           if(chip >= 5){
             instance.setbet(5,bet,number,{from: App.account});
-            betplaced.innerHTML = (Number(betplaced.innerHTML) +5);
-            App.getChips();
+            betplaced.innerHTML = (bets);
+            App.render();
 
           }else{
             alert("not enough chips");
@@ -144,12 +154,13 @@ App = {
         }
     });
   });
+  });
   App.render();
 },
 getChips: function(){
   App.contracts.Blockchaincasino.deployed().then(function(instance) {
       return instance.chips().then(function(chip){
-        $("#numchips").html(" " + chip);
+        $("#numchips").html("" + chip);
       });
 
     });

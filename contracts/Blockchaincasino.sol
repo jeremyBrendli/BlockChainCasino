@@ -5,6 +5,7 @@ contract Blockchaincasino
 uint public chips;
 uint public winnings;
 uint public betsplaced;
+uint HouseWinningsInEther;
 uint money = 0;
 uint i;
 uint[2] redblack = [0];
@@ -29,43 +30,59 @@ uint roll;
 function() external payable {
 
 }
+event ReRender(
+  uint value
+  );
 function getChips() public returns(uint){
+
+  emit ReRender(1);
   return chips;
 }
 function MoreChips(uint amount) public payable{
+  HouseWinningsInEther += msg.value;
+  emit ReRender(1);
   chips += amount;
 }
 function ClearWinnings() public {
+
+  emit ReRender(1);
+
+}
+
+function Payout(uint wins) external{
+  require( HouseWinningsInEther >= wins);
+  msg.sender.transfer(wins);
   winnings = 0;
-  betsplaced = 0;
+  emit ReRender(1);
 }
   function setbet(uint _money, string bet, uint number) public returns (uint)
   {
 
+    emit ReRender(1);
       if(chips >= _money)
       {
         if((keccak256(bet) == keccak256("red")))
         {
-          redblack[0] = _money;
+          redblack[0] += _money;
           chips -= _money;
           betsplaced += _money;
         }else if( (keccak256(bet) == keccak256("black")))
         {
-          redblack[1] = _money;
+          redblack[1] += _money;
           chips -= _money;
           betsplaced += _money;
         }else if((keccak256(bet) == keccak256("even")))
         {
-            evenodd[0] = _money;
+            evenodd[0] += _money;
             chips -= _money;
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("odd"))){
-          evenodd[1] = _money;
+          evenodd[1] += _money;
           chips -= _money;
           betsplaced += _money;
         }else if((keccak256(bet) == keccak256("low")))
         {
-            lowhigh[0] = _money;
+            lowhigh[0] += _money;
             chips -= _money;
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("high")))
@@ -75,47 +92,46 @@ function ClearWinnings() public {
           betsplaced += _money;
         }else if((keccak256(bet) == keccak256("dozens")))
         {
-          dozens[number] = _money;
+          dozens[number] += _money;
           chips -= _money;
           betsplaced += _money;
         }else if((keccak256(bet) == keccak256("columns")))
         {
-            columns[number] = _money;
+            columns[number] += _money;
             chips -= _money;
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("sixnum")))
         {
-            six[number] = _money;
+            six[number] += _money;
             chips -= _money;
             betsplaced += _money;
         }
         else if((keccak256(bet) == keccak256("fournum")))
         {
-            four[number] = _money;
+            four[number] += _money;
             chips -= _money;
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("threenums")))
         {
-            three[number] = _money;
+            three[number] += _money;
             chips -= _money;
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("twonums")))
         {
-            two[number] = _money;
+            two[number] += _money;
             chips -= _money;
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("single")))
         {
-            single[number] = _money;
+            single[number] += _money;
             chips -= _money;
             betsplaced += _money;
         }
       }
-
   }
-  function getbet(string bet, uint number) public view returns (uint)
+  function getbet(string bet, uint number) public returns (uint)
   {
-
+    emit ReRender(1);
     if((keccak256(bet) == keccak256("red")))
     {
     return redblack[0] * 2 ;
@@ -168,6 +184,7 @@ function ClearWinnings() public {
     function play(uint draw) public returns (uint)
     {
 
+      betsplaced = 0;
       //red or black
       for(i = 0; i < 18; i++)
       {
@@ -336,6 +353,7 @@ function ClearWinnings() public {
         }
       }
     }
+  emit ReRender(1);
 
 
 }

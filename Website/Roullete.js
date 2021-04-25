@@ -15,16 +15,17 @@ function Test(){
 //the animation function that starts the animation for the ball
 function ani(){
     document.getElementById("play").disabled = true;
-    setTimeout(enable,10000); //waits 10s before enabling the button and running the play game function in the App
+     //waits 10s before enabling the button and running the play game function in the App
     var el = document.getElementById('S'); //finds the ball
     el.classList.remove("sphere"); //removes the sphere class to reset the animations
     void el.offsetWidth; //resets the animations so it can play
     var num = getRandomInt(0,37);
     var spin = num;
-    num = ((num * 9.47))+ (355.28+1080); //sets where the ball is going to land and what degrees it will spin
+    var order = [6,21,33,16,4,23,35,14,2,0,28,9,26,30,11,7,20,32,17,5,22,34,15,3,24,36,13,1,00,27,10,25,29,12,8,19,31,18];
+    num = ((num * 9.47))+ (364.735+1080); //sets where the ball is going to land and what degrees it will spin
     r.style.setProperty('--value', num);
     el.classList.add("sphere");
-
+    setTimeout(enable,10000,order[spin]);
 
   }
 function enable(value){
@@ -35,7 +36,6 @@ App = {
   web3Provider: null,
   contracts: {},
   account: 0x0,
-
   init: function() {
     return App.initWeb3();
   },
@@ -50,6 +50,7 @@ App = {
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
       web3 = new Web3(App.web3Provider);
     }
+
     return App.initContract();
   },
 
@@ -61,14 +62,14 @@ App = {
       // Connect provider to interact with contract
 
       App.contracts.Blockchaincasino.setProvider(App.web3Provider);
-
+      App.listenforEvents();
       return App.render();
+
     });
   },
 
   //renders the appropriate data like account balance number chips winnings bets placed
   render: function() {
-
     web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
         App.account = account;
@@ -88,6 +89,7 @@ App = {
     App.getChips();
     App.getWinnings();
     App.getBetPlaced();
+
   },
   getBetPlaced: function(){
     App.contracts.Blockchaincasino.deployed().then(function(instance){
@@ -97,6 +99,17 @@ App = {
     });
 
   },
+  listenforEvents: function(){
+    App.contracts.Blockchaincasino.deployed().then(function(instance){
+      instance.ReRender({},{
+        fromBlock: 0,
+        toBlock: 'latest'
+      }).watch(function(error, event) {
+          // Reload when a new vote is recorded
+          App.render();
+        });
+      });
+    },
   Getmorechips: function(moreChips){
 
     web3.eth.getCoinbase(function(err, account) {
@@ -105,15 +118,18 @@ App = {
         App.account = account;
         web3.eth.getBalance(account,function(err,balance){
           if(err===null){
-            if(web3.fromWei( (moreChips/100),"ether") <= web3.fromWei(balance,"ether")){
+
+
+            if((moreChips/100) <= balance){
+              try{
               App.contracts.Blockchaincasino.deployed().then(function(instance){
-                web3.eth.sendTransaction({from:App.account,to:"0x8a12E78859A2C22BA7C82Faf13cdd007aA13E544",value:web3.toWei( (moreChips/100),"ether")});
-                instance.MoreChips(moreChips,{from: App.account});
+                instance.MoreChips(moreChips,{from: App.account, value: web3.toWei((moreChips/100), 'ether')});
                 App.render();
-
-
               });
-
+            }
+            catch(err){
+              alert(err);
+            }
             }
             else{
               alert("Insufficent Funds");
@@ -181,6 +197,7 @@ getWinnings: function(){
       instance.winnings().then(function(winnings){
         $("#win").html(winnings+"");
         $("#amountBet").html("0");
+
       })
 
     }).catch(function(err){
@@ -198,30 +215,21 @@ getWinnings: function(){
   })
 },
 Payout: function(){
-      web3.eth.getBalance("0x8a12E78859A2C22BA7C82Faf13cdd007aA13E544",function(err,balance){
-       if(err === null){
             App.contracts.Blockchaincasino.deployed().then(function(instance){
               instance.winnings().then(function(winnings){
-               if( web3.toWei(balance,"ether") >= web3.toWei( (winnings/100),"ether")){
                  if( winnings != 0){
-                    web3.eth.sendTransaction({from:"0x8a12E78859A2C22BA7C82Faf13cdd007aA13E544",to:App.account,value:web3.toWei( (winnings/100),"ether")});
-                    document.getElementById("win").innerHTML = 0;
-                    instance.ClearWinnings({from: App.account});
+try{
+                instance.Payout(web3.toWei((winnings/100),'ether'),{from:App.account});
+    }
+catch(err)
+  {
+  alert(err);
+  }
+              }
+              else{
+                alert("no winnings");
                   }
-                  else{
-                    alert("no winnings");
-                  }
-            }
-            else{
-              alert("We have insufficent funds please call help desk");
-            }
-
             });
-
-          });
-        }else{
-          alert("error on our system");
-        }
 });
 App.render();
 }

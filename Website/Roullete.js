@@ -35,7 +35,9 @@ function enable(value){
 App = {
   web3Provider: null,
   contracts: {},
+  contracts1:{},
   account: 0x0,
+  DOonce: true,
   init: function() {
     return App.initWeb3();
   },
@@ -55,14 +57,27 @@ App = {
   },
 
   initContract: function() {
-    //find the appropriate infromation for the smart contract like abi
+    //find the appropriate infromation for the smart contract like ab
     $.getJSON("Blockchaincasino.json", function(casino) {
       // Instantiate a new truffle contract from the artifact
       App.contracts.Blockchaincasino = TruffleContract(casino);
       // Connect provider to interact with contract
-
       App.contracts.Blockchaincasino.setProvider(App.web3Provider);
       App.listenforEvents();
+      return App.initContract1();
+    });
+
+  },
+  initContract1: function(){
+    $.getJSON("Bank.json", function(bank) {
+      // Instantiate a new truffle contract from the artifact
+      App.contracts1.Bank = TruffleContract(bank);
+      // Connect provider to interact with contract
+
+      App.contracts1.Bank.setProvider(App.web3Provider);
+
+
+      App.listenerforEvents1();
       return App.render();
 
     });
@@ -70,17 +85,19 @@ App = {
 
   //renders the appropriate data like account balance number chips winnings bets placed
   render: function() {
-    web3.eth.getCoinbase(function(err, account) {
+  web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
         App.account = account;
         $("#accountAddress").html("Your Account: " + account);
-        web3.eth.getBalance(account,function(err,balance){
+         web3.eth.getBalance(account,function(err,balance){
           if(err===null){
             $("#accountamount").html("Account Ballance: "+ web3.fromWei(balance,"ether")+ " ETH");
+          }else{
+            alert(err);
           }
         })
       }else{
-
+        alert('broken');
         $("#accountAddress").html("Your Account: " + err);
         $("#accountamount").html("Account Ballance: error");
 
@@ -92,13 +109,37 @@ App = {
 
   },
   getBetPlaced: function(){
+  //  alert('sss')
+
     App.contracts.Blockchaincasino.deployed().then(function(instance){
+try{
       instance.betsplaced().then(function(bets){
-        $("#amountBet").html(bets+"");
+        //alert(bets+ " bets");
+        $("#amountBet").html(bets+"  ");
       });
+    }
+    catch(err){
+      alert(err + " dd" )
+    }
     });
 
   },
+  test: function(){
+
+try{
+    App.contracts.Blockchaincasino.deployed().then(function(instance){
+
+      instance.test({from:App.account}).then(function(bets){
+        alert(bets + 'test');
+      });
+
+    });
+}
+catch(err){
+  alert(err);
+}
+
+},
   listenforEvents: function(){
     App.contracts.Blockchaincasino.deployed().then(function(instance){
       instance.ReRender({},{
@@ -106,9 +147,38 @@ App = {
         toBlock: 'latest'
       }).watch(function(error, event) {
           // Reload when a new vote is recorded
+
           App.render();
         });
       });
+    },
+    listenerforEvents1: function(){
+      App.contracts1.Bank.deployed().then(function(instance){
+
+         instance.ReRender({},{
+
+           toBlock: 'latest',
+           fromBlock:0,
+         }).watch(function(error, event)
+         {
+           if(!error){
+             App.render();
+           }else
+           {
+            App.render();
+            alert(error);
+           }
+          });
+
+         });
+
+    },
+    BetsPlaced:function(money,bet,number){
+    //  alert("hello");
+      App.contracts.Blockchaincasino.deployed().then(function(instance){
+
+        instance.setbet(money,bet,number,{from:App.account});
+          });
     },
   Getmorechips: function(moreChips){
 
@@ -123,8 +193,17 @@ App = {
             if((moreChips/100) <= balance){
               try{
               App.contracts.Blockchaincasino.deployed().then(function(instance){
-                instance.MoreChips(moreChips,{from: App.account, value: web3.toWei((moreChips/100), 'ether')});
-                App.render();
+
+                App.contracts1.Bank.deployed().then(function(bankinst){
+                  try{
+                return  bankinst.Pay(moreChips,{from:App.account,value: web3.toWei((moreChips/100), 'ether')});
+                alert('chips payed')
+                  }
+                  catch(err){
+                    alert(err)
+                  }
+                //instance.MoreChips(moreChips,{from:App.account});
+                })
               });
             }
             catch(err){
@@ -138,49 +217,65 @@ App = {
         });
       }
     });
-
-    App.render();
 },
 
   placeBet: function(bet,number){
     var betplaced = document.getElementById("amountBet");
     App.contracts.Blockchaincasino.deployed().then(function(instance) {
-      return instance.chips().then(function(chip){
+      App.contracts1.Bank.deployed().then(function(bankinst){
+
+      return bankinst.chips().then(function(chip){
+
         instance.betsplaced().then(function(bets){
 
         if( (document.getElementById("one").checked) ){
         if( chip >= 1)
         {
-        instance.setbet(1,bet,number,{from: App.account});
+          instance.setbet(1,bet,number,{from:App.account});
+        //bankinst.AdjustChips(1,bet,number,{from:App.account});
+
         betplaced.innerHTML = (bets);
-        App.render();
         }else{
 
         alert("not enough chips");
         }
         }else{
           if(chip >= 5){
-            instance.setbet(5,bet,number,{from: App.account});
+            instance.setbet(1,bet,number,{from:App.account});
+          //  bankint.AdjustChips(5,bet,number,{from:App.account});
             betplaced.innerHTML = (bets);
-            App.render();
 
           }else{
             alert("not enough chips");
           }
         }
     });
+
   });
   });
-  App.render();
+
+  });
 },
 getChips: function(){
-  App.contracts.Blockchaincasino.deployed().then(function(instance) {
-      return instance.chips().then(function(chip){
-        $("#numchips").html("" + chip);
-      });
+  try{
+  App.contracts1.Bank.deployed().then(function(instance){
+
+      try{
+      instance.chips().then(function(chip){
+        $("#numchips").html("" + Number(chip));
 
     });
 
+  }catch(err){
+  alert(err + " chipppp");
+  }
+
+  });
+
+}
+catch(err){
+  alert(err + "cjoppsdf");
+}
 },
 getWinnings: function(){
   App.contracts.Blockchaincasino.deployed().then(function(instance) {
@@ -204,7 +299,6 @@ getWinnings: function(){
       alert(err);
     });
   })
-  App.render();
   },
   getBet: function(){
     App.contracts.Blockchaincasino.deployed().then(function(instance) {
@@ -219,7 +313,9 @@ Payout: function(){
               instance.winnings().then(function(winnings){
                  if( winnings != 0){
 try{
-                instance.Payout(web3.toWei((winnings/100),'ether'),{from:App.account});
+            App.contracts1.Bank.deployed().then(function(instance){
+              instance.withdraw(web3.toWei((winnings/100),'ether'),{from:App.account});
+            })
     }
 catch(err)
   {
@@ -231,7 +327,6 @@ catch(err)
                   }
             });
 });
-App.render();
 }
 
 

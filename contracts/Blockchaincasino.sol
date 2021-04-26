@@ -1,12 +1,12 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.23;
 
-contract Blockchaincasino
+import "./Bank.sol";
+contract Blockchaincasino is Bank
 {
-uint public chips;
+//uint public chips = 10;
 uint public winnings;
 uint public betsplaced;
-uint HouseWinningsInEther;
-uint money = 0;
+//uint HouseWinningsInEther;
 uint i;
 uint[2] redblack = [0];
 uint[2] evenodd = [0];
@@ -24,114 +24,125 @@ uint[38] single = [0];
 uint[18] red = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36];
 uint[18] black = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35];
 
-//string betName[11] = ['Red','B','evenodd', 'lowhigh', 'dozens',
-//'columns', 'sixnum', 'Fivenum', 'fournum','threenums', 'twonums', 'straight'];
-uint roll;
-function() external payable {
 
+Bank public Bankobj;
+event ReRender(uint value);
+
+constructor(address bankaddress) public{
+
+  Bankobj = Bank(bankaddress);
 }
-event ReRender(
-  uint value
-  );
+/*
 function getChips() public returns(uint){
 
-  emit ReRender(1);
+  // emit ReRender(1);
   return chips;
 }
-function MoreChips(uint amount) public payable{
-  HouseWinningsInEther += msg.value;
-  emit ReRender(1);
+/*function MoreChips(uint amount) public{
+
+  // emit ReRender(1);
   chips += amount;
 }
-function ClearWinnings() public {
+*/
+//function ClearWinnings() public {
 
-  emit ReRender(1);
+  // emit ReRender(1);
 
-}
-
+//}
+/*
 function Payout(uint wins) external{
   require( HouseWinningsInEther >= wins);
+  HouseWinningsInEther -= wins;
   msg.sender.transfer(wins);
   winnings = 0;
-  emit ReRender(1);
+  // emit ReRender(1);
 }
+*//*
+function getChips() public view returns (uint)
+{
+    return Bankobj.getchips();
+}
+*/
   function setbet(uint _money, string bet, uint number) public returns (uint)
   {
 
-    emit ReRender(1);
-      if(chips >= _money)
-      {
+     emit ReRender(3);
+
         if((keccak256(bet) == keccak256("red")))
         {
+
           redblack[0] += _money;
-          chips -= _money;
+          Bankobj.AdjustChips(_money);
           betsplaced += _money;
         }else if( (keccak256(bet) == keccak256("black")))
         {
           redblack[1] += _money;
-          chips -= _money;
+          Bankobj.AdjustChips(_money);
           betsplaced += _money;
         }else if((keccak256(bet) == keccak256("even")))
         {
             evenodd[0] += _money;
-            chips -= _money;
+          Bankobj.AdjustChips(_money);
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("odd"))){
           evenodd[1] += _money;
-          chips -= _money;
+          Bankobj.AdjustChips(_money);
           betsplaced += _money;
         }else if((keccak256(bet) == keccak256("low")))
         {
             lowhigh[0] += _money;
-            chips -= _money;
+            Bankobj.AdjustChips(_money);
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("high")))
         {
           lowhigh[1] = _money;
-          chips -= _money;
+          Bankobj.AdjustChips(_money);
           betsplaced += _money;
         }else if((keccak256(bet) == keccak256("dozens")))
         {
           dozens[number] += _money;
-          chips -= _money;
+          Bankobj.AdjustChips(_money);
           betsplaced += _money;
         }else if((keccak256(bet) == keccak256("columns")))
         {
             columns[number] += _money;
-            chips -= _money;
+          Bankobj.AdjustChips(_money);
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("sixnum")))
         {
             six[number] += _money;
-            chips -= _money;
+          Bankobj.AdjustChips(_money);
             betsplaced += _money;
         }
         else if((keccak256(bet) == keccak256("fournum")))
         {
             four[number] += _money;
-            chips -= _money;
+          Bankobj.AdjustChips(_money);
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("threenums")))
         {
             three[number] += _money;
-            chips -= _money;
+          Bankobj.AdjustChips(_money);
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("twonums")))
         {
             two[number] += _money;
-            chips -= _money;
+          Bankobj.AdjustChips(_money);
             betsplaced += _money;
         }else if((keccak256(bet) == keccak256("single")))
         {
             single[number] += _money;
-            chips -= _money;
+          Bankobj.AdjustChips(_money);
             betsplaced += _money;
         }
-      }
+        emit ReRender(1);
+
   }
   function getbet(string bet, uint number) public returns (uint)
   {
     emit ReRender(1);
+
+
     if((keccak256(bet) == keccak256("red")))
     {
     return redblack[0] * 2 ;
@@ -174,12 +185,6 @@ function Payout(uint wins) external{
     return ( (single[number] * 35) + single[number]);
     }
     }
-    function test(uint a) public view returns (uint)
-    {
-    return play(a);
-    }
-
-
 
     function play(uint draw) public returns (uint)
     {
@@ -353,7 +358,7 @@ function Payout(uint wins) external{
         }
       }
     }
-  emit ReRender(1);
+emit ReRender(1);
 
 
 }

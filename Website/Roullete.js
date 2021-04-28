@@ -186,29 +186,19 @@ catch(err){
       if (err === null) {
 
         App.account = account;
+
         web3.eth.getBalance(account,function(err,balance){
           if(err===null){
 
 
             if((moreChips/100) <= balance){
-              try{
-              App.contracts.Blockchaincasino.deployed().then(function(instance){
 
                 App.contracts1.Bank.deployed().then(function(bankinst){
-                  try{
                 return  bankinst.Pay(moreChips,{from:App.account,value: web3.toWei((moreChips/100), 'ether')});
                 alert('chips payed')
-                  }
-                  catch(err){
-                    alert(err)
-                  }
+
                 //instance.MoreChips(moreChips,{from:App.account});
                 })
-              });
-            }
-            catch(err){
-              alert(err);
-            }
             }
             else{
               alert("Insufficent Funds");
@@ -241,7 +231,7 @@ catch(err){
         }
         }else{
           if(chip >= 5){
-            instance.setbet(1,bet,number,{from:App.account});
+            instance.setbet(5,bet,number,{from:App.account});
           //  bankint.AdjustChips(5,bet,number,{from:App.account});
             betplaced.innerHTML = (bets);
 
@@ -310,11 +300,13 @@ getWinnings: function(){
 },
 Payout: function(){
             App.contracts.Blockchaincasino.deployed().then(function(instance){
-              instance.winnings().then(function(winnings){
-                 if( winnings != 0){
+              return instance.winnings().then(function(wins){
+                instance.ClearWinnings({from:App.account});
+                alert(wins);
+                 if( wins != 0){
 try{
-            App.contracts1.Bank.deployed().then(function(instance){
-              instance.withdraw(web3.toWei((winnings/100),'ether'),{from:App.account});
+            App.contracts1.Bank.deployed().then(function(bnkinst){
+              bnkinst.withdraw(web3.toWei((wins/100),'ether'),{from:App.account});
             })
     }
 catch(err)
@@ -328,7 +320,6 @@ catch(err)
             });
 });
 }
-
 
 
 };

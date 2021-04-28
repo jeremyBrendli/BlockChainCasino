@@ -44,11 +44,10 @@ function getChips() public returns(uint){
   chips += amount;
 }
 */
-//function ClearWinnings() public {
-
-  // emit ReRender(1);
-
-//}
+function ClearWinnings() public {
+winnings = 0;
+emit ReRender(1);
+}
 /*
 function Payout(uint wins) external{
   require( HouseWinningsInEther >= wins);
@@ -190,6 +189,7 @@ function getChips() public view returns (uint)
     {
 
       betsplaced = 0;
+      if(draw != 0 && draw != 37){
       //red or black
       for(i = 0; i < 18; i++)
       {
@@ -203,14 +203,14 @@ function getChips() public view returns (uint)
     }
       //even odds
       if(draw%2 == 0){
-        winnings += getbet("even", 1);
+        winnings += getbet("even", 0);
       }else{
         winnings += getbet("odd",1);
       }
 
       //high low
       if(draw > 18){
-        winnings+= getbet("high",0);
+        winnings+= getbet("high",1);
       }
       else{
         winnings+= getbet("low",0);
@@ -238,30 +238,7 @@ function getChips() public view returns (uint)
         winnings += getbet("columns", 2);
       }
 
-      // six number bets
-      if(draw >= 1 && draw <=6){
-        winnings+= getbet("sixnum",0);
-      if(draw >=4 && draw <=9){
-        winnings+= getbet("sixnum",1);
-      }if(draw >=7 && draw <=12){
-        winnings+= getbet("sixnum",2);
-      }if(draw >=10 && draw <=15){
-        winnings+= getbet("sixnum",3);
-      }if(draw >=13 && draw <=18){
-        winnings+= getbet("sixnum",4);
-      }if(draw >=16 && draw <=21){
-        winnings+= getbet("sixnum",5);
-      }if(draw >=19 && draw <=24){
-        winnings+= getbet("sixnum",6);
-      }if(draw >=22 && draw <=27){
-        winnings+= getbet("sixnum",7);
-      }if(draw >=25 && draw <=30){
-        winnings+= getbet("sixnum",8);
-      }if(draw >=28 && draw <=33){
-        winnings+= getbet("sixnum",9);
-      }if(draw >=31 && draw <=36){
-        winnings+= getbet("sixnum",10);
-      }
+
 
       //fournum 1,2,5,4 ; 4,5,8,7
       for(i = 1; i<=31; i+=3){
@@ -327,15 +304,11 @@ function getChips() public view returns (uint)
 
 
 
-
+}
       //single
       //for drawing a 00
-      if(draw == 37){
-        winnings += getbet("single", 37);
-      }else
-      {
         winnings += getbet("single", draw);
-      }
+
       for(i = 0; i <56; i++)
       {
         if(i<2){
@@ -357,9 +330,9 @@ function getChips() public view returns (uint)
           single[i] = 0;
         }
       }
+      emit ReRender(1);
+
     }
-emit ReRender(1);
 
 
-}
 }

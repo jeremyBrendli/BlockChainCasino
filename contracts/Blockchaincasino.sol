@@ -3,10 +3,10 @@ pragma solidity ^0.4.23;
 import "./Bank.sol";
 contract Blockchaincasino is Bank
 {
-//uint public chips = 10;
+
+//inialized variables holds the value of the bets
 uint public winnings;
 uint public betsplaced;
-//uint HouseWinningsInEther;
 uint i;
 uint[2] redblack = [0];
 uint[2] evenodd = [0];
@@ -18,55 +18,28 @@ uint[22] four = [0];
 uint[12] three = [0];
 uint[56] two = [0];
 uint[38] single = [0];
-//bets position
-//[Red,Black,even, odd, low ,high, dozens, columns, sixnum,
 //fournum,threenums, twonums, straight
 uint[18] red = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36];
 uint[18] black = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35];
 
-
+// Bank object for calling bank functions and variables
 Bank public Bankobj;
-event ReRender(uint value);
-
+//accepts the address to the bank smart contract
 constructor(address bankaddress) public{
-
+  //inialies the bank object
   Bankobj = Bank(bankaddress);
 }
-/*
-function getChips() public returns(uint){
-
-  // emit ReRender(1);
-  return chips;
-}
-/*function MoreChips(uint amount) public{
-
-  // emit ReRender(1);
-  chips += amount;
-}
-*/
+//removes all the winnings of the player
+//only if we can pay them
 function ClearWinnings() public {
-winnings = 0;
-emit ReRender(1);
-}
-/*
-function Payout(uint wins) external{
-  require( HouseWinningsInEther >= wins);
-  HouseWinningsInEther -= wins;
-  msg.sender.transfer(wins);
+  require(Bankobj.balance >= (winnings * 10**18));
   winnings = 0;
-  // emit ReRender(1);
 }
-*//*
-function getChips() public view returns (uint)
-{
-    return Bankobj.getchips();
-}
-*/
+//keeps track of the bet placed so we can access it later when we play the playgame
+//param 1 amount of chips bet; param 2 type of bet ex,black; param 3 array possition that the button presses is
+//associated with
   function setbet(uint _money, string bet, uint number) public returns (uint)
   {
-
-     emit ReRender(3);
-
         if((keccak256(bet) == keccak256("red")))
         {
 
@@ -134,14 +107,15 @@ function getChips() public view returns (uint)
           Bankobj.AdjustChips(_money);
             betsplaced += _money;
         }
-        emit ReRender(1);
 
   }
+  //gets a value from an array that holds onto the betsplaced
+  //this function is called to check every bet position if the
+  //winning number can be there
+  //Ex, function is calle if the number is a red number and does the firset if statement
+  //param1 the type of bet param2 the array position of the bet type
   function getbet(string bet, uint number) public returns (uint)
   {
-    emit ReRender(1);
-
-
     if((keccak256(bet) == keccak256("red")))
     {
     return redblack[0] * 2 ;
@@ -184,7 +158,10 @@ function getChips() public view returns (uint)
     return ( (single[number] * 35) + single[number]);
     }
     }
-
+//searches to see if the drawn number has any bets placed on it
+//param1 draw: is the number the ball lands on
+//sets the winnings if the number drawn belongs to that possition
+//then sets the set bet arrays to zzero
     function play(uint draw) public returns (uint)
     {
 
@@ -197,7 +174,7 @@ function getChips() public view returns (uint)
           winnings += getbet("red",0);
           break;
         }else if(draw == black[i]){
-          winnings+= getbet("black",0);
+          winnings+= getbet("black",1);
           break;
       }
     }
@@ -238,7 +215,30 @@ function getChips() public view returns (uint)
         winnings += getbet("columns", 2);
       }
 
-
+//bet six numbers
+            if(draw >= 1 && draw <=6){
+              winnings+= getbet("sixnum",0);
+            }if(draw >=4 && draw <=9){
+              winnings+= getbet("sixnum",1);
+            }if(draw >=7 && draw <=12){
+              winnings+= getbet("sixnum",2);
+            }if(draw >=10 && draw <=15){
+              winnings+= getbet("sixnum",3);
+            }if(draw >=13 && draw <=18){
+              winnings+= getbet("sixnum",4);
+            }if(draw >=16 && draw <=21){
+              winnings+= getbet("sixnum",5);
+            }if(draw >=19 && draw <=24){
+              winnings+= getbet("sixnum",6);
+            }if(draw >=22 && draw <=27){
+              winnings+= getbet("sixnum",7);
+            }if(draw >=25 && draw <=30){
+              winnings+= getbet("sixnum",8);
+            }if(draw >=28 && draw <=33){
+              winnings+= getbet("sixnum",9);
+            }if(draw >=31 && draw <=36){
+              winnings+= getbet("sixnum",10);
+            }
 
       //fournum 1,2,5,4 ; 4,5,8,7
       for(i = 1; i<=31; i+=3){
@@ -309,6 +309,7 @@ function getChips() public view returns (uint)
       //for drawing a 00
         winnings += getbet("single", draw);
 
+//sets all arrays to zero so we don't win based on old bets
       for(i = 0; i <56; i++)
       {
         if(i<2){
@@ -330,7 +331,6 @@ function getChips() public view returns (uint)
           single[i] = 0;
         }
       }
-      emit ReRender(1);
 
     }
 

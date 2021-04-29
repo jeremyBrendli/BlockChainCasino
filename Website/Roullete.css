@@ -178,11 +178,38 @@ border-width:0px;
 }
 .three{
   background: none;
+  color:white;
   width:58px;
   height: 20px;
   border-width: 0px;
   text:"hello";
 }
+.sixinfo{
+  position: absolute;
+  left:720;
+  top:800;
+  font-size: 18px;
+}
+.sixbets{
+  display:grid;
+  grid-template-columns: repeat(4  ,1fr);
+  position:absolute;
+  left:719px;
+  top:900px;
+  width:50px;
+
+}
+.six{
+  background-color:black;
+  color: white;
+  border-color: red;
+  border-width: 1px;
+  width:75px;
+  height: 50px;
+  border-width: 5px;
+
+}
+
 .four{
   background:none;
   width:3px;

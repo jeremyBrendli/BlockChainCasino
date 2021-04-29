@@ -24,7 +24,7 @@
 <div id = "S"> </div>
 <img tag = "wheel" src= "Images/wheel.png" class = "center">
 <img tag = "table" src="Images/table.jpg" class = "table">
-<button id= 'play' class = "play" value="3" onclick="ani()" >Play </button><!-- button to play the game-->
+<button id= 'play' class = "play" value="3" onclick="STARTGAME()" >Play </button><!-- button to play the game-->
 <button class = "payout" onclick="App.Payout()"> payout</button> <!--button to redeam your winnings for ether-->
 
 <!-- This div holds the upper navigation tab-->
@@ -74,6 +74,22 @@
   <button class ="three" value = "9" onclick="App.placeBet('threenums',this.value)">3</button>
   <button class ="three" value = "10" onclick="App.placeBet('threenums',this.value)">3</button>
   <button class ="three" value = "11" onclick="App.placeBet('threenums',this.value)">3</button>
+
+</div>
+<p class = "sixinfo"> Group of six bets <br> EX) 1,2,3,4,5 or 4,5,6,8,7,9</p>
+<div class ="sixbets">
+  <!--three -->
+  <button class ="six" value = "0" onclick="App.placeBet('sixnum',this.value)">1st 6</button>
+  <button class ="six" value = "1" onclick="App.placeBet('sixnum',this.value)">2nd 6</button>
+  <button class ="six" value = "2" onclick="App.placeBet('sixnum',this.value)">3rd 6</button>
+  <button class ="six" value = "3" onclick="App.placeBet('sixnum',this.value)">4th 6</button>
+  <button class ="six" value = "4" onclick="App.placeBet('sixnum',this.value)">5th 6</button>
+  <button class ="six" value = "5" onclick="App.placeBet('sixnum',this.value)">6th 6</button>
+  <button class ="six" value = "6" onclick="App.placeBet('sixnum',this.value)">7th 6</button>
+  <button class ="six" value = "7" onclick="App.placeBet('sixnum',this.value)">8th 6</button>
+  <button class ="six" value = "8" onclick="App.placeBet('sixnum',this.value)">9th 6</button>
+  <button class ="six" value = "9" onclick="App.placeBet('sixnum',this.value)">10th 6</button>
+  <button class ="six" value = "10" onclick="App.placeBet('sixnum',this.value)">11th 6</button>
 
 </div>
 <div class = "twonumbetsH">

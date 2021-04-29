@@ -1,5 +1,6 @@
+
 var r = document.querySelector(':root'); //used to set a css variable
-function getRandomInt(min, max) { //used to find a random number between 0 and 37 to decide the winning number
+function getRandomInt(min, max) { //used to find a random number between 0 and 37 to decide the number the ball will land on
     var byteArray = new Uint8Array(1);
     window.crypto.getRandomValues(byteArray);
     var range = max - min + 1;
@@ -9,29 +10,30 @@ function getRandomInt(min, max) { //used to find a random number between 0 and 3
     return min + (byteArray[0] % range);
 
 }
-function Test(){
-  document.getElementById("win").innerHTML = document.getElementById("win").innerHTML + "hello";
-}
 //the animation function that starts the animation for the ball
-function ani(){
-    document.getElementById("play").disabled = true;
-     //waits 10s before enabling the button and running the play game function in the App
+function ani(num){
+    document.getElementById("play").disabled = true; //disables the play button to prevent multiple clicks durring a game
     var el = document.getElementById('S'); //finds the ball
     el.classList.remove("sphere"); //removes the sphere class to reset the animations
     void el.offsetWidth; //resets the animations so it can play
-    var num = getRandomInt(0,37);
-    var spin = num;
-    var order = [6,21,33,16,4,23,35,14,2,0,28,9,26,30,11,7,20,32,17,5,22,34,15,3,24,36,13,1,00,27,10,25,29,12,8,19,31,18];
     num = ((num * 9.47))+ (364.735+1080); //sets where the ball is going to land and what degrees it will spin
-    r.style.setProperty('--value', num);
-    el.classList.add("sphere");
-    setTimeout(enable,10000,order[spin]);
-
+    r.style.setProperty('--value', num); //sets the css variable
+    el.classList.add("sphere"); //adds the sphere class which starts the animation
+    setTimeout(enable,10000); //starts a timer til the animation is removed and the winnings are shown
   }
-function enable(value){
+
+//enables the winings to be showed after the wheel spins and enables the play button
+function enable(){
   document.getElementById("play").disabled = false;
-  App.playgame(value);
+  App.render()
 }
+// Starts the game loop
+function STARTGAME(){
+  var order = [6,21,33,16,4,23,35,14,2,0,28,9,26,30,11,7,20,32,17,5,22,34,15,3,24,36,13,1,00,27,10,25,29,12,8,19,31,18];
+  var randomnum = getRandomInt(0,37);
+  App.playgame(order[randomnum]);
+}
+
 App = {
   web3Provider: null,
   contracts: {},
@@ -41,8 +43,9 @@ App = {
   init: function() {
     return App.initWeb3();
   },
-
+//inializes web3 with the app provider depending on what we have metamask or ganache
   initWeb3: function() {
+
     if (typeof web3 !== 'undefined') {
       // If a web3 instance is already provided by Meta Mask.
       App.web3Provider = web3.currentProvider;
@@ -52,10 +55,11 @@ App = {
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
       web3 = new Web3(App.web3Provider);
     }
-
     return App.initContract();
   },
 
+//inializes the first contract of the blockchaincasion
+// this file is just the roulette solidity code
   initContract: function() {
     //find the appropriate infromation for the smart contract like ab
     $.getJSON("Blockchaincasino.json", function(casino) {
@@ -63,21 +67,18 @@ App = {
       App.contracts.Blockchaincasino = TruffleContract(casino);
       // Connect provider to interact with contract
       App.contracts.Blockchaincasino.setProvider(App.web3Provider);
-      App.listenforEvents();
-      return App.initContract1();
+      return App.initContract1();//inializes the bank function
     });
 
   },
+//inializes the second solidity file bank
+//bank is used to receive and send all money in the system
   initContract1: function(){
     $.getJSON("Bank.json", function(bank) {
       // Instantiate a new truffle contract from the artifact
       App.contracts1.Bank = TruffleContract(bank);
       // Connect provider to interact with contract
-
       App.contracts1.Bank.setProvider(App.web3Provider);
-
-
-      App.listenerforEvents1();
       return App.render();
 
     });
@@ -93,122 +94,65 @@ App = {
           if(err===null){
             $("#accountamount").html("Account Ballance: "+ web3.fromWei(balance,"ether")+ " ETH");
           }else{
-            alert(err);
+            alert(err + " getBalance");
           }
         })
       }else{
-        alert('broken');
         $("#accountAddress").html("Your Account: " + err);
         $("#accountamount").html("Account Ballance: error");
 
       }
     });
+    //calls other functions that render the data
     App.getChips();
     App.getWinnings();
     App.getBetPlaced();
 
   },
+//renders the bets placed on the screen
   getBetPlaced: function(){
-  //  alert('sss')
-
     App.contracts.Blockchaincasino.deployed().then(function(instance){
 try{
       instance.betsplaced().then(function(bets){
-        //alert(bets+ " bets");
         $("#amountBet").html(bets+"  ");
       });
     }
     catch(err){
-      alert(err + " dd" )
+      alert(err + " betsplaced failed" )
     }
     });
 
-  },
-  test: function(){
-
-try{
-    App.contracts.Blockchaincasino.deployed().then(function(instance){
-
-      instance.test({from:App.account}).then(function(bets){
-        alert(bets + 'test');
-      });
-
-    });
-}
-catch(err){
-  alert(err);
-}
-
 },
-  listenforEvents: function(){
-    App.contracts.Blockchaincasino.deployed().then(function(instance){
-      instance.ReRender({},{
-        fromBlock: 0,
-        toBlock: 'latest'
-      }).watch(function(error, event) {
-          // Reload when a new vote is recorded
 
-          App.render();
-        });
-      });
-    },
-    listenerforEvents1: function(){
-      App.contracts1.Bank.deployed().then(function(instance){
-
-         instance.ReRender({},{
-
-           toBlock: 'latest',
-           fromBlock:0,
-         }).watch(function(error, event)
-         {
-           if(!error){
-             App.render();
-           }else
-           {
-            App.render();
-            alert(error);
-           }
-          });
-
-         });
-
-    },
-    BetsPlaced:function(money,bet,number){
-    //  alert("hello");
-      App.contracts.Blockchaincasino.deployed().then(function(instance){
-
-        instance.setbet(money,bet,number,{from:App.account});
-          });
-    },
+//gives the player more chips if there are an appropriate balance in their accountamount
   Getmorechips: function(moreChips){
-
     web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
-
         App.account = account;
-
         web3.eth.getBalance(account,function(err,balance){
           if(err===null){
-
-
-            if((moreChips/100) <= balance){
-
+            //if the chips are more than the account then we don't send a request
+            if(web3.toWei((moreChips/100),"ether") <= balance){
                 App.contracts1.Bank.deployed().then(function(bankinst){
-                return  bankinst.Pay(moreChips,{from:App.account,value: web3.toWei((moreChips/100), 'ether')});
-                alert('chips payed')
-
-                //instance.MoreChips(moreChips,{from:App.account});
+                return  bankinst.Pay(moreChips,{from:App.account,value: web3.toWei((moreChips/100), 'ether')}).then(function(){
+                  App.render();
+                });
+                //sends a request to put more chips in the account depening on what button is pressed.
+                //this value sent is the amount of ether that a group of chips cost this is also the money that will be
+                //part of the bank
                 })
             }
             else{
               alert("Insufficent Funds");
+              App.render();
             }
           }
         });
       }
     });
 },
-
+//places the bet depending on what button you pressed
+//aslo checks to see if you have chips in your account if not no bets
   placeBet: function(bet,number){
     var betplaced = document.getElementById("amountBet");
     App.contracts.Blockchaincasino.deployed().then(function(instance) {
@@ -221,19 +165,19 @@ catch(err){
         if( (document.getElementById("one").checked) ){
         if( chip >= 1)
         {
-          instance.setbet(1,bet,number,{from:App.account});
-        //bankinst.AdjustChips(1,bet,number,{from:App.account});
-
-        betplaced.innerHTML = (bets);
-        }else{
-
-        alert("not enough chips");
+          //sets the value of your bet
+          //param1 amount bet; param2 type of bet single double; param 3 the array index that belongs to the button pressed
+          instance.setbet(1,bet,number,{from:App.account}).then(function(){
+            App.render();
+          }); //sets the value of your bet
+          }else{
+            alert("not enough chips");
         }
         }else{
           if(chip >= 5){
-            instance.setbet(5,bet,number,{from:App.account});
-          //  bankint.AdjustChips(5,bet,number,{from:App.account});
-            betplaced.innerHTML = (bets);
+            instance.setbet(5,bet,number,{from:App.account}).then(function(){
+              App.render();
+            });
 
           }else{
             alert("not enough chips");
@@ -246,6 +190,7 @@ catch(err){
 
   });
 },
+//prints the amount of chips you have to the screen
 getChips: function(){
   try{
   App.contracts1.Bank.deployed().then(function(instance){
@@ -253,20 +198,17 @@ getChips: function(){
       try{
       instance.chips().then(function(chip){
         $("#numchips").html("" + Number(chip));
-
     });
-
   }catch(err){
-  alert(err + " chipppp");
+  alert(err + " chips");
   }
-
   });
-
 }
 catch(err){
-  alert(err + "cjoppsdf");
+  alert(err + "bank deployed");
 }
 },
+//prints the amount of winnings to the screen
 getWinnings: function(){
   App.contracts.Blockchaincasino.deployed().then(function(instance) {
       return instance.winnings().then(function(chip){
@@ -276,47 +218,40 @@ getWinnings: function(){
     });
 
 },
+//runs the play game function in the solidity
+//param1 the number that the ball will land on
   playgame: function(number){
     App.contracts.Blockchaincasino.deployed().then(function(instance) {
+      //param1 the number the ball lands on;
     return instance.play(number,{from: App.account, gas: 3000000}).then(function(win){
-      instance.winnings().then(function(winnings){
-        $("#win").html(winnings+"");
-        $("#amountBet").html("0");
-
-      })
-
+      //calls the animation function once the player accepts the transaction
+      ani(number);
     }).catch(function(err){
-      alert(err);
+      alert(err + "Possible rejection");
     });
   })
   },
-  getBet: function(){
-    App.contracts.Blockchaincasino.deployed().then(function(instance) {
-    return instance.getbet("single",5,{from: App.account, gas: 3000000}).then(function(win){
-    }).catch(function(err){
-      alert(err);
-    });
-  })
-},
+//pays the player their winnings
 Payout: function(){
             App.contracts.Blockchaincasino.deployed().then(function(instance){
+              //gets the winings that the player has
               return instance.winnings().then(function(wins){
-                instance.ClearWinnings({from:App.account});
-                alert(wins);
+                //clears the winnings so you can only cash out once for each winning
+                //will only clear if the bank has enough money will revert otherwise
+                instance.ClearWinnings({from:App.account}).then(function(){
                  if( wins != 0){
-try{
             App.contracts1.Bank.deployed().then(function(bnkinst){
+              //calls withdraw function to send you your _money
+              //sends the amount in wei so needs to be converted other wise we send .01 wei per winnings
               bnkinst.withdraw(web3.toWei((wins/100),'ether'),{from:App.account});
+
             })
-    }
-catch(err)
-  {
-  alert(err);
-  }
-              }
-              else{
-                alert("no winnings");
-                  }
+}
+else{
+  alert("no Winnings")
+}
+            });
+
             });
 });
 }
@@ -325,6 +260,7 @@ catch(err)
 };
 
 $(window).load(function() {
+  //inialies the app when the website opens
     App.init();
 
 

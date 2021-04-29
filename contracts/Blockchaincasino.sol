@@ -300,10 +300,6 @@ function ClearWinnings() public {
             winnings += getbet("twonums", ( (i/3) + 45) );
         }
       }
-
-
-
-
 }
       //single
       //for drawing a 00
@@ -333,6 +329,4 @@ function ClearWinnings() public {
       }
 
     }
-
-
 }

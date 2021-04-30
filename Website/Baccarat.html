@@ -1,0 +1,104 @@
+<html>
+<link rel="stylesheet" href= "css/Baccarat.css"><!-- css code  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery code  -->
+<script src="js/Baccarat.js"></script>
+<script src="js/bootstrap.min.js"></script> <!-- bootstrap link  -->
+<script src="js/web3.min.js"></script> <!-- web3 code  -->
+<script src="js/truffle-contract.js"></script> <!-- truffle code  -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- w3schools css code  -->
+<head>
+  <title>Baccarat</title>
+</head>
+<body style="background-color:#CD5C5C;">
+  <script>
+  </script>
+<style>
+  .tab1{
+    tab-size: 4;
+  }
+  .button{
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button1{
+    background-color: white;
+    color: black;
+    border: 2px solid ##FFD700;
+  }
+
+  .button1:hover{
+    background-color: #FFD700;
+    color: white;
+  }
+
+  .button2{
+    background-color: white;
+    color: black;
+    border: 2px solid ##FFD700;
+  }
+
+  .button2:hover{
+    background-color: #FFD700;
+    color: white;
+  }
+
+  .parent{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .child{
+    position: absolute;
+    top: 210px;
+    left: 608px;
+  }
+
+  .child2{
+    position: absolute;
+    top: 210px;
+    left: 818px;
+  }
+
+  .child3{
+    position: absolute;
+    top: 210px;
+    left: 1000px;
+  }
+</style>
+
+<center>
+  <h1>Blockchain Baccarat </h1>
+  <div style="position: relative; left: 0; top: 0;">
+    <p id = "pHand" class="parent" >Player's Hand</p>
+    <p id = "bHand" class="parent" >Banker's Hand</p>
+  <div id="information">
+    <p >Account Number:</p>
+    <p id="accountAddress" class="welcome pull-left"></p>
+    <p >Account Balance:</p>
+    <p id="accountBalance" class="welcome pull-left"> ETH</p>
+    <p >Chips:</p>
+    <p id="numChips" class="welcome pull-left"></p>
+    <p>Winnings:</p>
+    <p id = "win" class = "winnings"></p>
+  </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <button class="button button1" onClick="App.playgame()">Play</button>
+  <button class="button button2" onClick="App.Getmorechips(5)">Get Chips</button>
+  <button class="button button2" onClick="App.placeBet()">Place 1 Bet</button>
+  <button class="button button2" onClick="App.withdraw()">Withdraw</button>
+</center>
+</html
+</body>

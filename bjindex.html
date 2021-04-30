@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--Name of the file is changed since there can only be one "index.html". Revert back if there is an error. -->
+ <html class="no-js">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery code  -->
+<script src="js/app.js"></script>
+<script src="js/bootstrap.min.js"></script> <!-- bootstrap link  -->
+<script src="js/web3.min.js"></script> <!-- web3 code  -->
+<script src="js/truffle-contract.js"></script> <!-- truffle code  -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- w3schools css code  -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+      <!-- Displays title of game  -->
+        <div class="game">
+            <h3>Blackjack</h3>
+            <!-- Main buttons to play the game -->
+            <div class="game-body">
+                <div class="game-options">
+                    <input type="button" id="btnStart" class="btn" value="start" onclick="startblackjack()">
+                    <input type="button" class="btn" value="hit me" onclick="hitMe()">
+                    <input type="button" class="btn" value="stay" onclick="stay()">
+                    </div>
+
+                        <div class="status" id="status"></div>
+
+                    <div id="deck" class="deck">
+                        <div id="deckcount">52</div>
+                    </div>
+
+
+                    <div id="players" class="players">
+                    </div>
+                      <!-- Buttons for the betting, chips, and withdraws  -->
+                  <div class = "bet">
+                    <input type = "button" class = "placeBet" value = "place bet" onclick = "App.placeBet()"> <br>
+                    <input type = "button" class = "getChips" value = "get chips" onclick = "App.getChips()"> <br>
+                    <input type = "button" class = "withdraw" value = "withdraw" onclick = "App.withdraw()">
+                  </div>
+                  <!--Displays the information -->
+                  <div class = "account">
+                    <p id = "AccountNumber"> Account Number: </p>
+                    <p id = "Balance"> Balance: </p>
+                  <p id = "Winnings">  Winnings: </p>
+                  <p id = "Chips"> Chips: </p>
+                </div>
+
+                    <div class="clear"></div>
+            </div>
+        </div>
+        <script src="main.js" async defer></script>
+    </body>
+</html>

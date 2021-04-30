@@ -40,6 +40,7 @@ App = {
   contracts1:{},
   account: 0x0,
   DOonce: true,
+
   init: function() {
     return App.initWeb3();
   },
@@ -126,6 +127,7 @@ try{
 
 //gives the player more chips if there are an appropriate balance in their accountamount
   Getmorechips: function(moreChips){
+
     web3.eth.getCoinbase(function(err, account) {
       if (err === null) {
         App.account = account;
@@ -243,7 +245,9 @@ Payout: function(){
             App.contracts1.Bank.deployed().then(function(bnkinst){
               //calls withdraw function to send you your _money
               //sends the amount in wei so needs to be converted other wise we send .01 wei per winnings
-              bnkinst.withdraw(web3.toWei((wins/100),'ether'),{from:App.account});
+              bnkinst.withdraw(web3.toWei((wins/100),'ether'),{from:App.account}).then(function(){
+                App.render();
+              });
 
             })
 }

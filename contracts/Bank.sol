@@ -1,7 +1,7 @@
 pragma solidity ^0.4.23;
 contract Bank{
   uint public chips;
-  uint public tsting = 0;
+
 
 //accepts payment to increase the number of chips
 function Pay(uint amount) payable public{
@@ -9,7 +9,7 @@ function Pay(uint amount) payable public{
 }
 //sends the mesage sender their winnings or some amount of money
 function withdraw(uint winnings) public{
-  require(winnings <= this.balance);
+  //require(winnings <= this.balance);
   msg.sender.transfer(winnings);
 }
 //returns the amount of chips

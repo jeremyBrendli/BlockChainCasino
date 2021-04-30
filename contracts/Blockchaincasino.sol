@@ -32,7 +32,7 @@ constructor(address bankaddress) public{
 //removes all the winnings of the player
 //only if we can pay them
 function ClearWinnings() public {
-  require(Bankobj.balance >= (winnings * 10**18));
+//  require(Bankobj.balance >= (winnings * 10**18));
   winnings = 0;
 }
 //keeps track of the bet placed so we can access it later when we play the playgame

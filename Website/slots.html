@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--all imports -->
+<script src="js/appSlots.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+
+<head>
+  <title>BlockChain Slots</title><!--Title  -->
+</head>
+ <body style="background-color:#CD5C5C;"> <!-- the background color-->
+   <script>
+      //this is an array for the images
+      var myPix = new Array("images/7.png","images/bells.png","images/Cherry.png","images/bar.jpg","images/diamond.png","images/grape.png","images/orange.png","images/star.png","images/WATERMELON.png");
+
+      function choosePic() { // this fucntion gets a random number and pics the image
+        var randomNum = Math.floor(Math.random() * myPix.length); // get the first random number
+        var randomNum2 = Math.floor(Math.random() * myPix.length); // gets the second random number
+        var randomNum3 = Math.floor(Math.random() * myPix.length); // gets the third random number
+
+        document.getElementById("image").src = myPix[randomNum]; // prints the first image on the html
+        document.getElementById("image2").src = myPix[randomNum2];// prints the second  image on the html
+        document.getElementById("image3").src = myPix[randomNum3];// prints the third image on the html
+
+        if ( randomNum == randomNum2 && randomNum == randomNum3){ // checks if the numbers are the same
+          var win = allSameNumber(randomNum); // save the winnings
+          App.winnings(); // calls the winnings in the app.js
+        }
+        else {
+          var win = otherValues(randomNum,randomNum2, randomNum3); // saves teh winnings
+          App.winnings();// calls the winnings in the app js
+
+        }
+     }
+     function allSameNumber(num1){ // if the numbers are all the same this sets the winnings
+       var winning; // winnings var
+        if (num1 == 0){ // checks the variable value
+          winning = 1; // saves the winning
+       }
+       else if (num1 ==1){ // checks the variable value
+         winning = 2;// saves the winning
+       }
+       else if (num1 ==2){ // checks the variable value
+         winning = 3;// saves the winning
+       }
+       else if (num1 ==3){ // checks the variable value
+         winning =4;// saves the winning
+       }
+       else if (num1 ==4){ // checks the variable value
+         winning = 5; // saves the winning
+       }
+       else if (num1 ==5){ // checks the variable value
+         winning = 6;// saves the winning
+       }
+       else if (num1 ==6){ // checks the variable value
+         winning = 7;// saves the winning
+       }
+       else if (num1 ==7){ // checks the variable value
+         winning = 8;// saves the winning
+       }
+       document.getElementById("won").innerHTML = winning; // prints the winnings
+       App.turn(); // calls the turn function in the app
+       return winning; // returns the winnings
+     }
+     function otherValues(num1, num2, num3){ // checks if at least 2 of the values have the same number
+       var winning;
+        if (num1 == 0 && ((num1 == num2) ||(num3 == num2) || (num1 == num3))){// checks the variable value
+          winning = 1;// saves the winning
+       }
+       else if (num1 ==1 && ((num1 == num2) ||(num3 == num2) || (num1 == num3))){// checks the variable value
+         winning = 1;// saves the winning
+       }
+       else if (num1 ==2 && ((num1 == num2) ||(num3 == num2) || (num1 == num3))){// checks the variable value
+         winning = 1;// saves the winning
+       }
+       else if (num1 ==3 && ((num1 == num2) ||(num3 == num2) || (num1 == num3))){// checks the variable value
+         winning = 2;// saves the winning
+       }
+       else if (num1 ==4 && ((num1 == num2) ||(num3 == num2) || (num1 == num3))){// checks the variable value
+         winning = 2;// saves the winning
+       }
+       else if (num1 ==5 && ((num1 == num2) ||(num3 == num2) || (num1 == num3))){// checks the variable value
+         winning = 1;// saves the winning
+       }
+       else if (num1 ==6 && ((num1 == num2) ||(num3 == num2) || (num1 == num3))){// checks the variable value
+         winning = 2;// saves the winning
+       }
+       else if (num1 ==7 && ((num1 == num2) ||(num3 == num2) || (num1 == num3))){// checks the variable value
+         winning = 2;// saves the winning
+       }
+       else {
+         winning = 0;// saves the winning
+       }
+       document.getElementById("won").innerHTML = winning; // prints the winnings
+       App.turn(); // calls the turns function in the app
+       return winning; // returns the winnings
+     }
+
+    </script>
+    <!--formmating the html-->
+  <style>
+
+    .tab1 {
+          tab-size: 4;
+        }
+    .button {
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: white;
+      color: black;
+      border: 2px solid ##FFD700;
+    }
+
+    .button1:hover {
+      background-color: #FFD700;
+      color: white;
+    }
+
+    .button2 {
+      background-color: white;
+      color: black;
+      border: 2px solid #B22222;
+    }
+
+    .button2:hover {
+      background-color: #B22222;
+      color: white;
+    }
+    .parent
+    {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .child
+    {
+      position: absolute;
+      top: 210px;
+      left: 608px;
+    }
+    .child2
+    {
+      position: absolute;
+      top: 210px;
+      left: 818px;
+    }
+    .child3
+    {
+      position: absolute;
+      top: 210px;
+      left: 1000px;
+
+    }
+</style>
+<!--all imports -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--formatting the top bar -->
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<!--top bar  -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="Roullete.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Roulette</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Baccarat</a>
+    <a href="slots.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Slots</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Blackjack</a>
+  </div>
+</div>
+<br>
+<h7>Slots</h7> <!--Name -->
+<center>
+  <h1>BlockChain Slots </h1> <!--Name -->
+  <div style="position: relative; left: 0; top: 0;"> <!--styling the image -->
+    <img src="images\slots.jpg" class="parent"  width="780" height="545"/> <!-- the slot image -->
+    <img id = "image" class="child" width="170" height="245" /><!--the first image -->
+    <img id = "image2" class="child2" width="170" height="245" /><!--the second image  -->
+    <img id = "image3"  class="child3" width="170" height="245" /><!--the third image -->
+
+  <div id="information"> <!-- the information -->
+    <p >Account Number:</p>
+    <p id="account" ></p><!-- where the acount number will be printed  -->
+    <p >Account Balance:</p>
+    <p id="accountBalance" > </p><!-- where the acount balance will be printed  -->
+    <p >Chips:</p>
+    <p id="Chips"></p><!-- where the chips will be printed  -->
+    <p >Turns:</p>
+    <p id="turns"></p><!-- where the turns  will be printed  -->
+    <p>Winnings:</p>
+    <p id = "won"></p> <!-- where the winnings  will be printed  -->
+  </div>
+  </div>
+  <br>
+
+  <br>
+  <button class="button button1" onclick="choosePic()">Play</button><!--button to start playing if you have turns  -->
+  <button class="button button2" onclick="App.playing()">Get Turns</button><!-- button to get theturns   -->
+  <button class="button button1" onclick="App.Getmorechips(2)">Get Chips</button><!-- button to get the chips  -->
+</center>
+</html
+</body>

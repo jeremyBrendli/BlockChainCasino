@@ -31,7 +31,9 @@ function enable(){
 function STARTGAME(){
   var order = [6,21,33,16,4,23,35,14,2,0,28,9,26,30,11,7,20,32,17,5,22,34,15,3,24,36,13,1,00,27,10,25,29,12,8,19,31,18];
   var randomnum = getRandomInt(0,37);
-  App.playgame(order[randomnum]);
+//  alert(randomnum)
+//  alert(order[randomnum])
+  App.playgame(order[randomnum],randomnum);
 }
 
 App = {
@@ -222,12 +224,12 @@ getWinnings: function(){
 },
 //runs the play game function in the solidity
 //param1 the number that the ball will land on
-  playgame: function(number){
+  playgame: function(number,random){
     App.contracts.Blockchaincasino.deployed().then(function(instance) {
       //param1 the number the ball lands on;
     return instance.play(number,{from: App.account, gas: 3000000}).then(function(win){
       //calls the animation function once the player accepts the transaction
-      ani(number);
+      ani(random);
     }).catch(function(err){
       alert(err + "Possible rejection");
     });

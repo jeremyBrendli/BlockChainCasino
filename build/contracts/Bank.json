@@ -82,14 +82,14 @@
     "absolutePath": "/C/Users/jerem/chainjeremy/casino/blockchaincasino/contracts/bank.sol",
     "exportedSymbols": {
       "Bank": [
-        3450
+        3454
       ]
     },
-    "id": 3451,
+    "id": 3455,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3403,
+        "id": 3407,
         "literals": [
           "solidity",
           "^",
@@ -105,19 +105,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3450,
+        "id": 3454,
         "linearizedBaseContracts": [
-          3450
+          3454
         ],
         "name": "Bank",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3405,
+            "id": 3409,
             "name": "chips",
             "nodeType": "VariableDeclaration",
-            "scope": 3450,
+            "scope": 3454,
             "src": "44:17:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -126,7 +126,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3404,
+              "id": 3408,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "44:4:5",
@@ -140,25 +140,25 @@
           },
           {
             "body": {
-              "id": 3414,
+              "id": 3418,
               "nodeType": "Block",
               "src": "159:24:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3412,
+                    "id": 3416,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3410,
+                      "id": 3414,
                       "name": "chips",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3405,
+                      "referencedDeclaration": 3409,
                       "src": "164:5:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -169,11 +169,11 @@
                     "operator": "+=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3411,
+                      "id": 3415,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3407,
+                      "referencedDeclaration": 3411,
                       "src": "173:6:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -186,14 +186,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3413,
+                  "id": 3417,
                   "nodeType": "ExpressionStatement",
                   "src": "164:15:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 3415,
+            "id": 3419,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -201,15 +201,15 @@
             "name": "Pay",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3408,
+              "id": 3412,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3407,
+                  "id": 3411,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3415,
+                  "scope": 3419,
                   "src": "132:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -218,7 +218,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3406,
+                    "id": 3410,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "132:4:5",
@@ -235,12 +235,12 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 3409,
+              "id": 3413,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "159:0:5"
             },
-            "scope": 3450,
+            "scope": 3454,
             "src": "119:64:5",
             "stateMutability": "payable",
             "superFunction": null,
@@ -248,7 +248,7 @@
           },
           {
             "body": {
-              "id": 3428,
+              "id": 3432,
               "nodeType": "Block",
               "src": "290:78:5",
               "statements": [
@@ -258,11 +258,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 3425,
+                        "id": 3429,
                         "name": "winnings",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3417,
+                        "referencedDeclaration": 3421,
                         "src": "355:8:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -281,18 +281,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3420,
+                          "id": 3424,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3614,
+                          "referencedDeclaration": 3618,
                           "src": "335:3:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 3423,
+                        "id": 3427,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -306,7 +306,7 @@
                           "typeString": "address"
                         }
                       },
-                      "id": 3424,
+                      "id": 3428,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -320,7 +320,7 @@
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 3426,
+                    "id": 3430,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -334,14 +334,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3427,
+                  "id": 3431,
                   "nodeType": "ExpressionStatement",
                   "src": "335:29:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 3429,
+            "id": 3433,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -349,15 +349,15 @@
             "name": "withdraw",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3418,
+              "id": 3422,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3417,
+                  "id": 3421,
                   "name": "winnings",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3429,
+                  "scope": 3433,
                   "src": "269:13:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -366,7 +366,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3416,
+                    "id": 3420,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "269:4:5",
@@ -383,12 +383,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3419,
+              "id": 3423,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "290:0:5"
             },
-            "scope": 3450,
+            "scope": 3454,
             "src": "251:117:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -396,33 +396,33 @@
           },
           {
             "body": {
-              "id": 3436,
+              "id": 3440,
               "nodeType": "Block",
               "src": "447:21:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3434,
+                    "id": 3438,
                     "name": "chips",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 3405,
+                    "referencedDeclaration": 3409,
                     "src": "459:5:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 3433,
-                  "id": 3435,
+                  "functionReturnParameters": 3437,
+                  "id": 3439,
                   "nodeType": "Return",
                   "src": "452:12:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 3437,
+            "id": 3441,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -430,22 +430,22 @@
             "name": "getchips",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3430,
+              "id": 3434,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "418:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3433,
+              "id": 3437,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3432,
+                  "id": 3436,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3437,
+                  "scope": 3441,
                   "src": "442:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -454,7 +454,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3431,
+                    "id": 3435,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "442:4:5",
@@ -469,7 +469,7 @@
               ],
               "src": "441:6:5"
             },
-            "scope": 3450,
+            "scope": 3454,
             "src": "401:67:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -477,25 +477,25 @@
           },
           {
             "body": {
-              "id": 3448,
+              "id": 3452,
               "nodeType": "Block",
               "src": "565:32:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3446,
+                    "id": 3450,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3442,
+                      "id": 3446,
                       "name": "chips",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3405,
+                      "referencedDeclaration": 3409,
                       "src": "572:5:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -510,18 +510,18 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 3445,
+                      "id": 3449,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 3443,
+                        "id": 3447,
                         "name": "chips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3405,
+                        "referencedDeclaration": 3409,
                         "src": "580:5:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -532,11 +532,11 @@
                       "operator": "-",
                       "rightExpression": {
                         "argumentTypes": null,
-                        "id": 3444,
+                        "id": 3448,
                         "name": "money",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3439,
+                        "referencedDeclaration": 3443,
                         "src": "588:5:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -555,14 +555,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3447,
+                  "id": 3451,
                   "nodeType": "ExpressionStatement",
                   "src": "572:21:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 3449,
+            "id": 3453,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -570,15 +570,15 @@
             "name": "AdjustChips",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3440,
+              "id": 3444,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3439,
+                  "id": 3443,
                   "name": "money",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3449,
+                  "scope": 3453,
                   "src": "546:10:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -587,7 +587,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3438,
+                    "id": 3442,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "546:4:5",
@@ -604,19 +604,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3441,
+              "id": 3445,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "565:0:5"
             },
-            "scope": 3450,
+            "scope": 3454,
             "src": "525:72:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 3451,
+        "scope": 3455,
         "src": "26:576:5"
       }
     ],
@@ -626,14 +626,14 @@
     "absolutePath": "/C/Users/jerem/chainjeremy/casino/blockchaincasino/contracts/bank.sol",
     "exportedSymbols": {
       "Bank": [
-        3450
+        3454
       ]
     },
-    "id": 3451,
+    "id": 3455,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3403,
+        "id": 3407,
         "literals": [
           "solidity",
           "^",
@@ -649,19 +649,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3450,
+        "id": 3454,
         "linearizedBaseContracts": [
-          3450
+          3454
         ],
         "name": "Bank",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3405,
+            "id": 3409,
             "name": "chips",
             "nodeType": "VariableDeclaration",
-            "scope": 3450,
+            "scope": 3454,
             "src": "44:17:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -670,7 +670,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3404,
+              "id": 3408,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "44:4:5",
@@ -684,25 +684,25 @@
           },
           {
             "body": {
-              "id": 3414,
+              "id": 3418,
               "nodeType": "Block",
               "src": "159:24:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3412,
+                    "id": 3416,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3410,
+                      "id": 3414,
                       "name": "chips",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3405,
+                      "referencedDeclaration": 3409,
                       "src": "164:5:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -713,11 +713,11 @@
                     "operator": "+=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3411,
+                      "id": 3415,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3407,
+                      "referencedDeclaration": 3411,
                       "src": "173:6:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -730,14 +730,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3413,
+                  "id": 3417,
                   "nodeType": "ExpressionStatement",
                   "src": "164:15:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 3415,
+            "id": 3419,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -745,15 +745,15 @@
             "name": "Pay",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3408,
+              "id": 3412,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3407,
+                  "id": 3411,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3415,
+                  "scope": 3419,
                   "src": "132:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -762,7 +762,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3406,
+                    "id": 3410,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "132:4:5",
@@ -779,12 +779,12 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 3409,
+              "id": 3413,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "159:0:5"
             },
-            "scope": 3450,
+            "scope": 3454,
             "src": "119:64:5",
             "stateMutability": "payable",
             "superFunction": null,
@@ -792,7 +792,7 @@
           },
           {
             "body": {
-              "id": 3428,
+              "id": 3432,
               "nodeType": "Block",
               "src": "290:78:5",
               "statements": [
@@ -802,11 +802,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 3425,
+                        "id": 3429,
                         "name": "winnings",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3417,
+                        "referencedDeclaration": 3421,
                         "src": "355:8:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -825,18 +825,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3420,
+                          "id": 3424,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3614,
+                          "referencedDeclaration": 3618,
                           "src": "335:3:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 3423,
+                        "id": 3427,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -850,7 +850,7 @@
                           "typeString": "address"
                         }
                       },
-                      "id": 3424,
+                      "id": 3428,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -864,7 +864,7 @@
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 3426,
+                    "id": 3430,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -878,14 +878,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 3427,
+                  "id": 3431,
                   "nodeType": "ExpressionStatement",
                   "src": "335:29:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 3429,
+            "id": 3433,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -893,15 +893,15 @@
             "name": "withdraw",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3418,
+              "id": 3422,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3417,
+                  "id": 3421,
                   "name": "winnings",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3429,
+                  "scope": 3433,
                   "src": "269:13:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -910,7 +910,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3416,
+                    "id": 3420,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "269:4:5",
@@ -927,12 +927,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3419,
+              "id": 3423,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "290:0:5"
             },
-            "scope": 3450,
+            "scope": 3454,
             "src": "251:117:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -940,33 +940,33 @@
           },
           {
             "body": {
-              "id": 3436,
+              "id": 3440,
               "nodeType": "Block",
               "src": "447:21:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3434,
+                    "id": 3438,
                     "name": "chips",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 3405,
+                    "referencedDeclaration": 3409,
                     "src": "459:5:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 3433,
-                  "id": 3435,
+                  "functionReturnParameters": 3437,
+                  "id": 3439,
                   "nodeType": "Return",
                   "src": "452:12:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 3437,
+            "id": 3441,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -974,22 +974,22 @@
             "name": "getchips",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3430,
+              "id": 3434,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "418:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3433,
+              "id": 3437,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3432,
+                  "id": 3436,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3437,
+                  "scope": 3441,
                   "src": "442:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -998,7 +998,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3431,
+                    "id": 3435,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "442:4:5",
@@ -1013,7 +1013,7 @@
               ],
               "src": "441:6:5"
             },
-            "scope": 3450,
+            "scope": 3454,
             "src": "401:67:5",
             "stateMutability": "view",
             "superFunction": null,
@@ -1021,25 +1021,25 @@
           },
           {
             "body": {
-              "id": 3448,
+              "id": 3452,
               "nodeType": "Block",
               "src": "565:32:5",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3446,
+                    "id": 3450,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3442,
+                      "id": 3446,
                       "name": "chips",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3405,
+                      "referencedDeclaration": 3409,
                       "src": "572:5:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1054,18 +1054,18 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 3445,
+                      "id": 3449,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 3443,
+                        "id": 3447,
                         "name": "chips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3405,
+                        "referencedDeclaration": 3409,
                         "src": "580:5:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1076,11 +1076,11 @@
                       "operator": "-",
                       "rightExpression": {
                         "argumentTypes": null,
-                        "id": 3444,
+                        "id": 3448,
                         "name": "money",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3439,
+                        "referencedDeclaration": 3443,
                         "src": "588:5:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1099,14 +1099,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3447,
+                  "id": 3451,
                   "nodeType": "ExpressionStatement",
                   "src": "572:21:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 3449,
+            "id": 3453,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1114,15 +1114,15 @@
             "name": "AdjustChips",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3440,
+              "id": 3444,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3439,
+                  "id": 3443,
                   "name": "money",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3449,
+                  "scope": 3453,
                   "src": "546:10:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1131,7 +1131,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3438,
+                    "id": 3442,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "546:4:5",
@@ -1148,19 +1148,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3441,
+              "id": 3445,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "565:0:5"
             },
-            "scope": 3450,
+            "scope": 3454,
             "src": "525:72:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 3451,
+        "scope": 3455,
         "src": "26:576:5"
       }
     ],
@@ -1174,10 +1174,10 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x884e2fb2b7beccaa2d64b087f810f0daac2360e8",
-      "transactionHash": "0xfd964f2579aeb70c190e8c82f98c9e90e60160a924c49570794c0ae5ffb98753"
+      "address": "0xd9ae78cb6ffe2df2b26f55d5c5c260bbd1984d9a",
+      "transactionHash": "0xffe1b806bc14efa640cda9eb6827cbd9c8aa6951254864b9b1961850be4297dc"
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2021-04-30T02:01:36.475Z"
+  "updatedAt": "2021-04-30T02:38:11.087Z"
 }

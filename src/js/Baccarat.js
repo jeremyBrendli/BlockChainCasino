@@ -115,7 +115,7 @@ App = {
                //sends a request to put more chips in the account depening on what button is pressed.
                 //this value sent is the amount of ether that a group of chips cost this is also the money that will be
                 //part of the bank
-               alert('chips payed')
+
                 }
                  catch(err){
                    alert(err)
@@ -142,11 +142,13 @@ withdraw: function(){
   App.contracts.Baccarat.deployed().then(function(instance){
     instance.winnings().then(function(wins){
       instance.ClearWinnings({from: App.account}).then(function(clear){
-        alert("Line 159");
+      //  alert("Line 159");
 
         App.contracts1.Bank.deployed().then(function(bankinst){
-          alert("Line 161");
-          bankinst.withdraw(web3.toWei((wins/100), "ether"),{from:App.account})
+          //alert("Line 161");
+          bankinst.withdraw(web3.toWei((wins/100), "ether"),{from:App.account}).then(function(){
+            App.render()
+          })
         });
       })
     });
@@ -155,47 +157,40 @@ withdraw: function(){
 
 //places the bet when you press the Place Bet button
 placeBet: function(money){
-    alert();
 
-try{
+  App.contracts1.Bank.deployed().then(function(bankinst){
+    bankinst.chips().then(function(chips){
+      if(chips != 0 ){
+
+
+
     App.contracts.Baccarat.deployed().then(function(instance) {
-      App.contracts1.Bank.deployed().then(function(bankinst){
-
-      return bankinst.chips().then(function(chip){
         // Sends 5 chips to be placed as a bet.
-        instance.betsplaced().then(function(bets){
-          instance.setBet(5,{from:App.account}).then(function(){
+          instance.setBet(1,{from:App.account}).then(function(){
             App.render();
           })
-    });
-
-  });
-  });
 
 });
-}catch(e){
-  alert(e);
 }
+else{
+    alert("Insufficent chips");
+}
+})
+})
+
 },
 
 //prints the amount of chips you have to the screen
 getChips: function(){
   try{
-    alert();
-  App.contracts1.Bank.deployed().then(function(instance){
 
-      try{
+  App.contracts1.Bank.deployed().then(function(instance){
       instance.chips().then(function(chip){
 
         $("#numChips").html("" + Number(chip));
 
 
     });
-
-  }catch(err){
-  alert(err + " chipppp");
-  }
-
   });
 
 }

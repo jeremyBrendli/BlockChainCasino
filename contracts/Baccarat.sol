@@ -141,7 +141,7 @@ contract Baccarat is Bank{
     if(player>banker && flag == 0){
 			winnings += getBet();//bet is added to the player's amount
 		}
-
+        betsplaced = 0;
 
 
   }

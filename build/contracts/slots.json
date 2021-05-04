@@ -211,14 +211,14 @@
     "absolutePath": "/C/Users/jerem/chainjeremy/casino/blockchaincasino/contracts/slots.sol",
     "exportedSymbols": {
       "slots": [
-        3599
+        3603
       ]
     },
-    "id": 3600,
+    "id": 3604,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3452,
+        "id": 3456,
         "literals": [
           "solidity",
           "^",
@@ -231,10 +231,10 @@
       {
         "absolutePath": "/C/Users/jerem/chainjeremy/casino/blockchaincasino/contracts/Bank.sol",
         "file": "./Bank.sol",
-        "id": 3453,
+        "id": 3457,
         "nodeType": "ImportDirective",
-        "scope": 3600,
-        "sourceUnit": 525,
+        "scope": 3604,
+        "sourceUnit": 529,
         "src": "26:20:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -245,19 +245,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3599,
+        "id": 3603,
         "linearizedBaseContracts": [
-          3599
+          3603
         ],
         "name": "slots",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3455,
+            "id": 3459,
             "name": "winnings",
             "nodeType": "VariableDeclaration",
-            "scope": 3599,
+            "scope": 3603,
             "src": "95:20:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -266,7 +266,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3454,
+              "id": 3458,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "95:4:6",
@@ -280,10 +280,10 @@
           },
           {
             "constant": false,
-            "id": 3457,
+            "id": 3461,
             "name": "playing",
             "nodeType": "VariableDeclaration",
-            "scope": 3599,
+            "scope": 3603,
             "src": "143:19:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -292,7 +292,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 3456,
+              "id": 3460,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "143:4:6",
@@ -306,10 +306,10 @@
           },
           {
             "constant": false,
-            "id": 3459,
+            "id": 3463,
             "name": "turns",
             "nodeType": "VariableDeclaration",
-            "scope": 3599,
+            "scope": 3603,
             "src": "196:17:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -318,7 +318,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3458,
+              "id": 3462,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "196:4:6",
@@ -332,10 +332,10 @@
           },
           {
             "constant": false,
-            "id": 3461,
+            "id": 3465,
             "name": "chips",
             "nodeType": "VariableDeclaration",
-            "scope": 3599,
+            "scope": 3603,
             "src": "237:17:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -344,7 +344,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3460,
+              "id": 3464,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "237:4:6",
@@ -358,25 +358,25 @@
           },
           {
             "body": {
-              "id": 3474,
+              "id": 3478,
               "nodeType": "Block",
               "src": "405:120:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3468,
+                    "id": 3472,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3466,
+                      "id": 3470,
                       "name": "winnings",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3455,
+                      "referencedDeclaration": 3459,
                       "src": "416:8:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -388,7 +388,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 3467,
+                      "id": 3471,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -409,25 +409,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3469,
+                  "id": 3473,
                   "nodeType": "ExpressionStatement",
                   "src": "416:12:6"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3472,
+                    "id": 3476,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3470,
+                      "id": 3474,
                       "name": "playing",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3457,
+                      "referencedDeclaration": 3461,
                       "src": "461:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -439,7 +439,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 3471,
+                      "id": 3475,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -460,14 +460,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3473,
+                  "id": 3477,
                   "nodeType": "ExpressionStatement",
                   "src": "461:15:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3475,
+            "id": 3479,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -475,15 +475,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3464,
+              "id": 3468,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3463,
+                  "id": 3467,
                   "name": "bank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3475,
+                  "scope": 3479,
                   "src": "385:12:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -492,7 +492,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3462,
+                    "id": 3466,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "385:7:6",
@@ -509,12 +509,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3465,
+              "id": 3469,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "405:0:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "372:153:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -522,7 +522,7 @@
           },
           {
             "body": {
-              "id": 3483,
+              "id": 3487,
               "nodeType": "Block",
               "src": "589:66:6",
               "statements": [
@@ -532,11 +532,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3480,
+                        "id": 3484,
                         "name": "playing",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3457,
+                        "referencedDeclaration": 3461,
                         "src": "639:7:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -544,7 +544,7 @@
                         }
                       }
                     ],
-                    "id": 3481,
+                    "id": 3485,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -557,15 +557,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 3479,
-                  "id": 3482,
+                  "functionReturnParameters": 3483,
+                  "id": 3486,
                   "nodeType": "Return",
                   "src": "632:15:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3484,
+            "id": 3488,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -573,22 +573,22 @@
             "name": "getPlaying",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3476,
+              "id": 3480,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "552:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3479,
+              "id": 3483,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3478,
+                  "id": 3482,
                   "name": "_playing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3484,
+                  "scope": 3488,
                   "src": "575:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -597,7 +597,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3477,
+                    "id": 3481,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "575:4:6",
@@ -612,7 +612,7 @@
               ],
               "src": "574:15:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "533:122:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -620,7 +620,7 @@
           },
           {
             "body": {
-              "id": 3492,
+              "id": 3496,
               "nodeType": "Block",
               "src": "713:60:6",
               "statements": [
@@ -630,11 +630,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3489,
+                        "id": 3493,
                         "name": "chips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3461,
+                        "referencedDeclaration": 3465,
                         "src": "759:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -642,7 +642,7 @@
                         }
                       }
                     ],
-                    "id": 3490,
+                    "id": 3494,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -655,15 +655,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 3488,
-                  "id": 3491,
+                  "functionReturnParameters": 3492,
+                  "id": 3495,
                   "nodeType": "Return",
                   "src": "752:13:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3493,
+            "id": 3497,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -671,22 +671,22 @@
             "name": "getChips",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3485,
+              "id": 3489,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "678:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3488,
+              "id": 3492,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3487,
+                  "id": 3491,
                   "name": "_chips",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3493,
+                  "scope": 3497,
                   "src": "701:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -695,7 +695,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3486,
+                    "id": 3490,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "701:4:6",
@@ -710,7 +710,7 @@
               ],
               "src": "700:13:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "661:112:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -718,7 +718,7 @@
           },
           {
             "body": {
-              "id": 3518,
+              "id": 3522,
               "nodeType": "Block",
               "src": "848:280:6",
               "statements": [
@@ -729,18 +729,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 3502,
+                    "id": 3506,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 3500,
+                      "id": 3504,
                       "name": "_turns",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3495,
+                      "referencedDeclaration": 3499,
                       "src": "878:6:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -752,7 +752,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 3501,
+                      "id": 3505,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -774,25 +774,25 @@
                     }
                   },
                   "falseBody": {
-                    "id": 3516,
+                    "id": 3520,
                     "nodeType": "Block",
                     "src": "1025:96:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3512,
+                          "id": 3516,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 3510,
+                            "id": 3514,
                             "name": "turns",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3459,
+                            "referencedDeclaration": 3463,
                             "src": "1036:5:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -803,11 +803,11 @@
                           "operator": "=",
                           "rightHandSide": {
                             "argumentTypes": null,
-                            "id": 3511,
+                            "id": 3515,
                             "name": "_turns",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3495,
+                            "referencedDeclaration": 3499,
                             "src": "1044:6:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -820,54 +820,54 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 3513,
+                        "id": 3517,
                         "nodeType": "ExpressionStatement",
                         "src": "1036:14:6"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3514,
+                          "id": 3518,
                           "name": "turns",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3459,
+                          "referencedDeclaration": 3463,
                           "src": "1086:5:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "functionReturnParameters": 3499,
-                        "id": 3515,
+                        "functionReturnParameters": 3503,
+                        "id": 3519,
                         "nodeType": "Return",
                         "src": "1079:12:6"
                       }
                     ]
                   },
-                  "id": 3517,
+                  "id": 3521,
                   "nodeType": "IfStatement",
                   "src": "875:246:6",
                   "trueBody": {
-                    "id": 3509,
+                    "id": 3513,
                     "nodeType": "Block",
                     "src": "890:123:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3505,
+                          "id": 3509,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 3503,
+                            "id": 3507,
                             "name": "turns",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3459,
+                            "referencedDeclaration": 3463,
                             "src": "929:5:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -879,7 +879,7 @@
                           "rightHandSide": {
                             "argumentTypes": null,
                             "hexValue": "35",
-                            "id": 3504,
+                            "id": 3508,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -900,26 +900,26 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 3506,
+                        "id": 3510,
                         "nodeType": "ExpressionStatement",
                         "src": "929:9:6"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3507,
+                          "id": 3511,
                           "name": "turns",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3459,
+                          "referencedDeclaration": 3463,
                           "src": "977:5:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "functionReturnParameters": 3499,
-                        "id": 3508,
+                        "functionReturnParameters": 3503,
+                        "id": 3512,
                         "nodeType": "Return",
                         "src": "970:12:6"
                       }
@@ -929,7 +929,7 @@
               ]
             },
             "documentation": null,
-            "id": 3519,
+            "id": 3523,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -937,15 +937,15 @@
             "name": "setTurns",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3496,
+              "id": 3500,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3495,
+                  "id": 3499,
                   "name": "_turns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3519,
+                  "scope": 3523,
                   "src": "797:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -954,7 +954,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3494,
+                    "id": 3498,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "797:4:6",
@@ -971,15 +971,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3499,
+              "id": 3503,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3498,
+                  "id": 3502,
                   "name": "numofTurns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3519,
+                  "scope": 3523,
                   "src": "832:15:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -988,7 +988,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3497,
+                    "id": 3501,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "832:4:6",
@@ -1003,7 +1003,7 @@
               ],
               "src": "831:17:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "779:349:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -1011,7 +1011,7 @@
           },
           {
             "body": {
-              "id": 3527,
+              "id": 3531,
               "nodeType": "Block",
               "src": "1187:70:6",
               "statements": [
@@ -1021,11 +1021,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3524,
+                        "id": 3528,
                         "name": "playing",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3457,
+                        "referencedDeclaration": 3461,
                         "src": "1241:7:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1033,7 +1033,7 @@
                         }
                       }
                     ],
-                    "id": 3525,
+                    "id": 3529,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -1046,15 +1046,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 3523,
-                  "id": 3526,
+                  "functionReturnParameters": 3527,
+                  "id": 3530,
                   "nodeType": "Return",
                   "src": "1234:15:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3528,
+            "id": 3532,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1062,22 +1062,22 @@
             "name": "Playing",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3520,
+              "id": 3524,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1150:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3523,
+              "id": 3527,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3522,
+                  "id": 3526,
                   "name": "_playing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3528,
+                  "scope": 3532,
                   "src": "1173:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1086,7 +1086,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3521,
+                    "id": 3525,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1173:4:6",
@@ -1101,7 +1101,7 @@
               ],
               "src": "1172:15:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "1134:123:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -1109,7 +1109,7 @@
           },
           {
             "body": {
-              "id": 3551,
+              "id": 3555,
               "nodeType": "Block",
               "src": "1329:264:6",
               "statements": [
@@ -1120,18 +1120,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 3537,
+                    "id": 3541,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 3535,
+                      "id": 3539,
                       "name": "_turns",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3530,
+                      "referencedDeclaration": 3534,
                       "src": "1363:6:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1143,7 +1143,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 3536,
+                      "id": 3540,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1165,54 +1165,54 @@
                     }
                   },
                   "falseBody": {
-                    "id": 3549,
+                    "id": 3553,
                     "nodeType": "Block",
                     "src": "1548:38:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3547,
+                          "id": 3551,
                           "name": "_turns",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3530,
+                          "referencedDeclaration": 3534,
                           "src": "1568:6:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "functionReturnParameters": 3534,
-                        "id": 3548,
+                        "functionReturnParameters": 3538,
+                        "id": 3552,
                         "nodeType": "Return",
                         "src": "1561:13:6"
                       }
                     ]
                   },
-                  "id": 3550,
+                  "id": 3554,
                   "nodeType": "IfStatement",
                   "src": "1360:226:6",
                   "trueBody": {
-                    "id": 3546,
+                    "id": 3550,
                     "nodeType": "Block",
                     "src": "1374:159:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3542,
+                          "id": 3546,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 3538,
+                            "id": 3542,
                             "name": "_turns",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3530,
+                            "referencedDeclaration": 3534,
                             "src": "1428:6:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1227,18 +1227,18 @@
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             },
-                            "id": 3541,
+                            "id": 3545,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "argumentTypes": null,
-                              "id": 3539,
+                              "id": 3543,
                               "name": "_turns",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3530,
+                              "referencedDeclaration": 3534,
                               "src": "1437:6:6",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1250,7 +1250,7 @@
                             "rightExpression": {
                               "argumentTypes": null,
                               "hexValue": "31",
-                              "id": 3540,
+                              "id": 3544,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1277,26 +1277,26 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 3543,
+                        "id": 3547,
                         "nodeType": "ExpressionStatement",
                         "src": "1428:19:6"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3544,
+                          "id": 3548,
                           "name": "_turns",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3530,
+                          "referencedDeclaration": 3534,
                           "src": "1490:6:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "functionReturnParameters": 3534,
-                        "id": 3545,
+                        "functionReturnParameters": 3538,
+                        "id": 3549,
                         "nodeType": "Return",
                         "src": "1483:13:6"
                       }
@@ -1306,7 +1306,7 @@
               ]
             },
             "documentation": null,
-            "id": 3552,
+            "id": 3556,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1314,15 +1314,15 @@
             "name": "updateTurns",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3531,
+              "id": 3535,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3530,
+                  "id": 3534,
                   "name": "_turns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3552,
+                  "scope": 3556,
                   "src": "1285:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1331,7 +1331,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3529,
+                    "id": 3533,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1285:4:6",
@@ -1348,15 +1348,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3534,
+              "id": 3538,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3533,
+                  "id": 3537,
                   "name": "_turn",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3552,
+                  "scope": 3556,
                   "src": "1318:10:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1365,7 +1365,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3532,
+                    "id": 3536,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1318:4:6",
@@ -1380,7 +1380,7 @@
               ],
               "src": "1317:12:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "1263:330:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -1388,25 +1388,25 @@
           },
           {
             "body": {
-              "id": 3579,
+              "id": 3583,
               "nodeType": "Block",
               "src": "1684:233:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3565,
+                    "id": 3569,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3563,
+                      "id": 3567,
                       "name": "winnings",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3455,
+                      "referencedDeclaration": 3459,
                       "src": "1739:8:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1417,11 +1417,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3564,
+                      "id": 3568,
                       "name": "_winnings",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3554,
+                      "referencedDeclaration": 3558,
                       "src": "1750:9:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1434,55 +1434,9 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3566,
-                  "nodeType": "ExpressionStatement",
-                  "src": "1739:20:6"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 3569,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 3567,
-                      "name": "chips",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3461,
-                      "src": "1785:5:6",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "id": 3568,
-                      "name": "_chips",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3558,
-                      "src": "1793:6:6",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "1785:14:6",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
                   "id": 3570,
                   "nodeType": "ExpressionStatement",
-                  "src": "1785:14:6"
+                  "src": "1739:20:6"
                 },
                 {
                   "expression": {
@@ -1495,14 +1449,14 @@
                     "leftHandSide": {
                       "argumentTypes": null,
                       "id": 3571,
-                      "name": "playing",
+                      "name": "chips",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3457,
-                      "src": "1822:7:6",
+                      "referencedDeclaration": 3465,
+                      "src": "1785:5:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
                       }
                     },
                     "nodeType": "Assignment",
@@ -1510,25 +1464,25 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "id": 3572,
-                      "name": "_playing",
+                      "name": "_chips",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3556,
-                      "src": "1832:8:6",
+                      "referencedDeclaration": 3562,
+                      "src": "1793:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
                       }
                     },
-                    "src": "1822:18:6",
+                    "src": "1785:14:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
                   "id": 3574,
                   "nodeType": "ExpressionStatement",
-                  "src": "1822:18:6"
+                  "src": "1785:14:6"
                 },
                 {
                   "expression": {
@@ -1541,10 +1495,56 @@
                     "leftHandSide": {
                       "argumentTypes": null,
                       "id": 3575,
+                      "name": "playing",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3461,
+                      "src": "1822:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3576,
+                      "name": "_playing",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3560,
+                      "src": "1832:8:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1822:18:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3578,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1822:18:6"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3581,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3579,
                       "name": "turns",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3459,
+                      "referencedDeclaration": 3463,
                       "src": "1873:5:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1555,11 +1555,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3576,
+                      "id": 3580,
                       "name": "_turns",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3560,
+                      "referencedDeclaration": 3564,
                       "src": "1881:6:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1572,14 +1572,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3578,
+                  "id": 3582,
                   "nodeType": "ExpressionStatement",
                   "src": "1873:14:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3580,
+            "id": 3584,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1587,15 +1587,15 @@
             "name": "setValues",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3561,
+              "id": 3565,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3554,
+                  "id": 3558,
                   "name": "_winnings",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3580,
+                  "scope": 3584,
                   "src": "1621:14:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1604,7 +1604,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3553,
+                    "id": 3557,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1621:4:6",
@@ -1618,10 +1618,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3556,
+                  "id": 3560,
                   "name": "_playing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3580,
+                  "scope": 3584,
                   "src": "1636:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1630,7 +1630,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3555,
+                    "id": 3559,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1636:4:6",
@@ -1644,10 +1644,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3558,
+                  "id": 3562,
                   "name": "_chips",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3580,
+                  "scope": 3584,
                   "src": "1652:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1656,7 +1656,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3557,
+                    "id": 3561,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1652:4:6",
@@ -1670,10 +1670,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3560,
+                  "id": 3564,
                   "name": "_turns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3580,
+                  "scope": 3584,
                   "src": "1665:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1682,7 +1682,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3559,
+                    "id": 3563,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1665:4:6",
@@ -1699,12 +1699,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3562,
+              "id": 3566,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1684:0:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "1601:316:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1712,7 +1712,7 @@
           },
           {
             "body": {
-              "id": 3597,
+              "id": 3601,
               "nodeType": "Block",
               "src": "2019:80:6",
               "statements": [
@@ -1722,11 +1722,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3591,
+                        "id": 3595,
                         "name": "winnings",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3455,
+                        "referencedDeclaration": 3459,
                         "src": "2037:8:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1735,11 +1735,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3592,
+                        "id": 3596,
                         "name": "playing",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3457,
+                        "referencedDeclaration": 3461,
                         "src": "2047:7:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1748,11 +1748,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3593,
+                        "id": 3597,
                         "name": "chips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3461,
+                        "referencedDeclaration": 3465,
                         "src": "2056:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1761,11 +1761,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3594,
+                        "id": 3598,
                         "name": "turns",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3459,
+                        "referencedDeclaration": 3463,
                         "src": "2063:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1773,7 +1773,7 @@
                         }
                       }
                     ],
-                    "id": 3595,
+                    "id": 3599,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -1786,15 +1786,15 @@
                       "typeString": "tuple(uint256,bool,uint256,uint256)"
                     }
                   },
-                  "functionReturnParameters": 3590,
-                  "id": 3596,
+                  "functionReturnParameters": 3594,
+                  "id": 3600,
                   "nodeType": "Return",
                   "src": "2028:41:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3598,
+            "id": 3602,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1802,22 +1802,22 @@
             "name": "getValues",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3581,
+              "id": 3585,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1941:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3590,
+              "id": 3594,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3583,
+                  "id": 3587,
                   "name": "_winnings",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3598,
+                  "scope": 3602,
                   "src": "1963:14:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1826,7 +1826,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3582,
+                    "id": 3586,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1963:4:6",
@@ -1840,10 +1840,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3585,
+                  "id": 3589,
                   "name": "_playing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3598,
+                  "scope": 3602,
                   "src": "1979:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1852,7 +1852,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3584,
+                    "id": 3588,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1979:4:6",
@@ -1866,10 +1866,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3587,
+                  "id": 3591,
                   "name": "_chips",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3598,
+                  "scope": 3602,
                   "src": "1994:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1878,7 +1878,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3586,
+                    "id": 3590,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1994:4:6",
@@ -1892,10 +1892,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3589,
+                  "id": 3593,
                   "name": "_turns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3598,
+                  "scope": 3602,
                   "src": "2007:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1904,7 +1904,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3588,
+                    "id": 3592,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2007:4:6",
@@ -1919,14 +1919,14 @@
               ],
               "src": "1962:57:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "1923:176:6",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 3600,
+        "scope": 3604,
         "src": "73:2029:6"
       }
     ],
@@ -1936,14 +1936,14 @@
     "absolutePath": "/C/Users/jerem/chainjeremy/casino/blockchaincasino/contracts/slots.sol",
     "exportedSymbols": {
       "slots": [
-        3599
+        3603
       ]
     },
-    "id": 3600,
+    "id": 3604,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3452,
+        "id": 3456,
         "literals": [
           "solidity",
           "^",
@@ -1956,10 +1956,10 @@
       {
         "absolutePath": "/C/Users/jerem/chainjeremy/casino/blockchaincasino/contracts/Bank.sol",
         "file": "./Bank.sol",
-        "id": 3453,
+        "id": 3457,
         "nodeType": "ImportDirective",
-        "scope": 3600,
-        "sourceUnit": 525,
+        "scope": 3604,
+        "sourceUnit": 529,
         "src": "26:20:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1970,19 +1970,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 3599,
+        "id": 3603,
         "linearizedBaseContracts": [
-          3599
+          3603
         ],
         "name": "slots",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3455,
+            "id": 3459,
             "name": "winnings",
             "nodeType": "VariableDeclaration",
-            "scope": 3599,
+            "scope": 3603,
             "src": "95:20:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1991,7 +1991,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3454,
+              "id": 3458,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "95:4:6",
@@ -2005,10 +2005,10 @@
           },
           {
             "constant": false,
-            "id": 3457,
+            "id": 3461,
             "name": "playing",
             "nodeType": "VariableDeclaration",
-            "scope": 3599,
+            "scope": 3603,
             "src": "143:19:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2017,7 +2017,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 3456,
+              "id": 3460,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "143:4:6",
@@ -2031,10 +2031,10 @@
           },
           {
             "constant": false,
-            "id": 3459,
+            "id": 3463,
             "name": "turns",
             "nodeType": "VariableDeclaration",
-            "scope": 3599,
+            "scope": 3603,
             "src": "196:17:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2043,7 +2043,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3458,
+              "id": 3462,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "196:4:6",
@@ -2057,10 +2057,10 @@
           },
           {
             "constant": false,
-            "id": 3461,
+            "id": 3465,
             "name": "chips",
             "nodeType": "VariableDeclaration",
-            "scope": 3599,
+            "scope": 3603,
             "src": "237:17:6",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2069,7 +2069,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 3460,
+              "id": 3464,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "237:4:6",
@@ -2083,25 +2083,25 @@
           },
           {
             "body": {
-              "id": 3474,
+              "id": 3478,
               "nodeType": "Block",
               "src": "405:120:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3468,
+                    "id": 3472,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3466,
+                      "id": 3470,
                       "name": "winnings",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3455,
+                      "referencedDeclaration": 3459,
                       "src": "416:8:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2113,7 +2113,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 3467,
+                      "id": 3471,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2134,25 +2134,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3469,
+                  "id": 3473,
                   "nodeType": "ExpressionStatement",
                   "src": "416:12:6"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3472,
+                    "id": 3476,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3470,
+                      "id": 3474,
                       "name": "playing",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3457,
+                      "referencedDeclaration": 3461,
                       "src": "461:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -2164,7 +2164,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 3471,
+                      "id": 3475,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2185,14 +2185,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 3473,
+                  "id": 3477,
                   "nodeType": "ExpressionStatement",
                   "src": "461:15:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3475,
+            "id": 3479,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -2200,15 +2200,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3464,
+              "id": 3468,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3463,
+                  "id": 3467,
                   "name": "bank",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3475,
+                  "scope": 3479,
                   "src": "385:12:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2217,7 +2217,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 3462,
+                    "id": 3466,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "385:7:6",
@@ -2234,12 +2234,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3465,
+              "id": 3469,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "405:0:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "372:153:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2247,7 +2247,7 @@
           },
           {
             "body": {
-              "id": 3483,
+              "id": 3487,
               "nodeType": "Block",
               "src": "589:66:6",
               "statements": [
@@ -2257,11 +2257,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3480,
+                        "id": 3484,
                         "name": "playing",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3457,
+                        "referencedDeclaration": 3461,
                         "src": "639:7:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -2269,7 +2269,7 @@
                         }
                       }
                     ],
-                    "id": 3481,
+                    "id": 3485,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -2282,15 +2282,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 3479,
-                  "id": 3482,
+                  "functionReturnParameters": 3483,
+                  "id": 3486,
                   "nodeType": "Return",
                   "src": "632:15:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3484,
+            "id": 3488,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2298,22 +2298,22 @@
             "name": "getPlaying",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3476,
+              "id": 3480,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "552:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3479,
+              "id": 3483,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3478,
+                  "id": 3482,
                   "name": "_playing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3484,
+                  "scope": 3488,
                   "src": "575:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2322,7 +2322,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3477,
+                    "id": 3481,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "575:4:6",
@@ -2337,7 +2337,7 @@
               ],
               "src": "574:15:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "533:122:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -2345,7 +2345,7 @@
           },
           {
             "body": {
-              "id": 3492,
+              "id": 3496,
               "nodeType": "Block",
               "src": "713:60:6",
               "statements": [
@@ -2355,11 +2355,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3489,
+                        "id": 3493,
                         "name": "chips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3461,
+                        "referencedDeclaration": 3465,
                         "src": "759:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2367,7 +2367,7 @@
                         }
                       }
                     ],
-                    "id": 3490,
+                    "id": 3494,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -2380,15 +2380,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 3488,
-                  "id": 3491,
+                  "functionReturnParameters": 3492,
+                  "id": 3495,
                   "nodeType": "Return",
                   "src": "752:13:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3493,
+            "id": 3497,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2396,22 +2396,22 @@
             "name": "getChips",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3485,
+              "id": 3489,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "678:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3488,
+              "id": 3492,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3487,
+                  "id": 3491,
                   "name": "_chips",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3493,
+                  "scope": 3497,
                   "src": "701:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2420,7 +2420,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3486,
+                    "id": 3490,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "701:4:6",
@@ -2435,7 +2435,7 @@
               ],
               "src": "700:13:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "661:112:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -2443,7 +2443,7 @@
           },
           {
             "body": {
-              "id": 3518,
+              "id": 3522,
               "nodeType": "Block",
               "src": "848:280:6",
               "statements": [
@@ -2454,18 +2454,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 3502,
+                    "id": 3506,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 3500,
+                      "id": 3504,
                       "name": "_turns",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3495,
+                      "referencedDeclaration": 3499,
                       "src": "878:6:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2477,7 +2477,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 3501,
+                      "id": 3505,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2499,25 +2499,25 @@
                     }
                   },
                   "falseBody": {
-                    "id": 3516,
+                    "id": 3520,
                     "nodeType": "Block",
                     "src": "1025:96:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3512,
+                          "id": 3516,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 3510,
+                            "id": 3514,
                             "name": "turns",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3459,
+                            "referencedDeclaration": 3463,
                             "src": "1036:5:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2528,11 +2528,11 @@
                           "operator": "=",
                           "rightHandSide": {
                             "argumentTypes": null,
-                            "id": 3511,
+                            "id": 3515,
                             "name": "_turns",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3495,
+                            "referencedDeclaration": 3499,
                             "src": "1044:6:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2545,54 +2545,54 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 3513,
+                        "id": 3517,
                         "nodeType": "ExpressionStatement",
                         "src": "1036:14:6"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3514,
+                          "id": 3518,
                           "name": "turns",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3459,
+                          "referencedDeclaration": 3463,
                           "src": "1086:5:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "functionReturnParameters": 3499,
-                        "id": 3515,
+                        "functionReturnParameters": 3503,
+                        "id": 3519,
                         "nodeType": "Return",
                         "src": "1079:12:6"
                       }
                     ]
                   },
-                  "id": 3517,
+                  "id": 3521,
                   "nodeType": "IfStatement",
                   "src": "875:246:6",
                   "trueBody": {
-                    "id": 3509,
+                    "id": 3513,
                     "nodeType": "Block",
                     "src": "890:123:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3505,
+                          "id": 3509,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 3503,
+                            "id": 3507,
                             "name": "turns",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3459,
+                            "referencedDeclaration": 3463,
                             "src": "929:5:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2604,7 +2604,7 @@
                           "rightHandSide": {
                             "argumentTypes": null,
                             "hexValue": "35",
-                            "id": 3504,
+                            "id": 3508,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2625,26 +2625,26 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 3506,
+                        "id": 3510,
                         "nodeType": "ExpressionStatement",
                         "src": "929:9:6"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3507,
+                          "id": 3511,
                           "name": "turns",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3459,
+                          "referencedDeclaration": 3463,
                           "src": "977:5:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "functionReturnParameters": 3499,
-                        "id": 3508,
+                        "functionReturnParameters": 3503,
+                        "id": 3512,
                         "nodeType": "Return",
                         "src": "970:12:6"
                       }
@@ -2654,7 +2654,7 @@
               ]
             },
             "documentation": null,
-            "id": 3519,
+            "id": 3523,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2662,15 +2662,15 @@
             "name": "setTurns",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3496,
+              "id": 3500,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3495,
+                  "id": 3499,
                   "name": "_turns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3519,
+                  "scope": 3523,
                   "src": "797:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2679,7 +2679,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3494,
+                    "id": 3498,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "797:4:6",
@@ -2696,15 +2696,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3499,
+              "id": 3503,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3498,
+                  "id": 3502,
                   "name": "numofTurns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3519,
+                  "scope": 3523,
                   "src": "832:15:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2713,7 +2713,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3497,
+                    "id": 3501,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "832:4:6",
@@ -2728,7 +2728,7 @@
               ],
               "src": "831:17:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "779:349:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -2736,7 +2736,7 @@
           },
           {
             "body": {
-              "id": 3527,
+              "id": 3531,
               "nodeType": "Block",
               "src": "1187:70:6",
               "statements": [
@@ -2746,11 +2746,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3524,
+                        "id": 3528,
                         "name": "playing",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3457,
+                        "referencedDeclaration": 3461,
                         "src": "1241:7:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -2758,7 +2758,7 @@
                         }
                       }
                     ],
-                    "id": 3525,
+                    "id": 3529,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -2771,15 +2771,15 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 3523,
-                  "id": 3526,
+                  "functionReturnParameters": 3527,
+                  "id": 3530,
                   "nodeType": "Return",
                   "src": "1234:15:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3528,
+            "id": 3532,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -2787,22 +2787,22 @@
             "name": "Playing",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3520,
+              "id": 3524,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1150:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3523,
+              "id": 3527,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3522,
+                  "id": 3526,
                   "name": "_playing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3528,
+                  "scope": 3532,
                   "src": "1173:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2811,7 +2811,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3521,
+                    "id": 3525,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1173:4:6",
@@ -2826,7 +2826,7 @@
               ],
               "src": "1172:15:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "1134:123:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -2834,7 +2834,7 @@
           },
           {
             "body": {
-              "id": 3551,
+              "id": 3555,
               "nodeType": "Block",
               "src": "1329:264:6",
               "statements": [
@@ -2845,18 +2845,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 3537,
+                    "id": 3541,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 3535,
+                      "id": 3539,
                       "name": "_turns",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3530,
+                      "referencedDeclaration": 3534,
                       "src": "1363:6:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2868,7 +2868,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 3536,
+                      "id": 3540,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2890,54 +2890,54 @@
                     }
                   },
                   "falseBody": {
-                    "id": 3549,
+                    "id": 3553,
                     "nodeType": "Block",
                     "src": "1548:38:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3547,
+                          "id": 3551,
                           "name": "_turns",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3530,
+                          "referencedDeclaration": 3534,
                           "src": "1568:6:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "functionReturnParameters": 3534,
-                        "id": 3548,
+                        "functionReturnParameters": 3538,
+                        "id": 3552,
                         "nodeType": "Return",
                         "src": "1561:13:6"
                       }
                     ]
                   },
-                  "id": 3550,
+                  "id": 3554,
                   "nodeType": "IfStatement",
                   "src": "1360:226:6",
                   "trueBody": {
-                    "id": 3546,
+                    "id": 3550,
                     "nodeType": "Block",
                     "src": "1374:159:6",
                     "statements": [
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3542,
+                          "id": 3546,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
                             "argumentTypes": null,
-                            "id": 3538,
+                            "id": 3542,
                             "name": "_turns",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3530,
+                            "referencedDeclaration": 3534,
                             "src": "1428:6:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2952,18 +2952,18 @@
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             },
-                            "id": 3541,
+                            "id": 3545,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "argumentTypes": null,
-                              "id": 3539,
+                              "id": 3543,
                               "name": "_turns",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3530,
+                              "referencedDeclaration": 3534,
                               "src": "1437:6:6",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2975,7 +2975,7 @@
                             "rightExpression": {
                               "argumentTypes": null,
                               "hexValue": "31",
-                              "id": 3540,
+                              "id": 3544,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -3002,26 +3002,26 @@
                             "typeString": "uint256"
                           }
                         },
-                        "id": 3543,
+                        "id": 3547,
                         "nodeType": "ExpressionStatement",
                         "src": "1428:19:6"
                       },
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 3544,
+                          "id": 3548,
                           "name": "_turns",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3530,
+                          "referencedDeclaration": 3534,
                           "src": "1490:6:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "functionReturnParameters": 3534,
-                        "id": 3545,
+                        "functionReturnParameters": 3538,
+                        "id": 3549,
                         "nodeType": "Return",
                         "src": "1483:13:6"
                       }
@@ -3031,7 +3031,7 @@
               ]
             },
             "documentation": null,
-            "id": 3552,
+            "id": 3556,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -3039,15 +3039,15 @@
             "name": "updateTurns",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3531,
+              "id": 3535,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3530,
+                  "id": 3534,
                   "name": "_turns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3552,
+                  "scope": 3556,
                   "src": "1285:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3056,7 +3056,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3529,
+                    "id": 3533,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1285:4:6",
@@ -3073,15 +3073,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3534,
+              "id": 3538,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3533,
+                  "id": 3537,
                   "name": "_turn",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3552,
+                  "scope": 3556,
                   "src": "1318:10:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3090,7 +3090,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3532,
+                    "id": 3536,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1318:4:6",
@@ -3105,7 +3105,7 @@
               ],
               "src": "1317:12:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "1263:330:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -3113,25 +3113,25 @@
           },
           {
             "body": {
-              "id": 3579,
+              "id": 3583,
               "nodeType": "Block",
               "src": "1684:233:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 3565,
+                    "id": 3569,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 3563,
+                      "id": 3567,
                       "name": "winnings",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3455,
+                      "referencedDeclaration": 3459,
                       "src": "1739:8:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3142,11 +3142,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3564,
+                      "id": 3568,
                       "name": "_winnings",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3554,
+                      "referencedDeclaration": 3558,
                       "src": "1750:9:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3159,55 +3159,9 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3566,
-                  "nodeType": "ExpressionStatement",
-                  "src": "1739:20:6"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 3569,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 3567,
-                      "name": "chips",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3461,
-                      "src": "1785:5:6",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "id": 3568,
-                      "name": "_chips",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3558,
-                      "src": "1793:6:6",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "1785:14:6",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
                   "id": 3570,
                   "nodeType": "ExpressionStatement",
-                  "src": "1785:14:6"
+                  "src": "1739:20:6"
                 },
                 {
                   "expression": {
@@ -3220,14 +3174,14 @@
                     "leftHandSide": {
                       "argumentTypes": null,
                       "id": 3571,
-                      "name": "playing",
+                      "name": "chips",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3457,
-                      "src": "1822:7:6",
+                      "referencedDeclaration": 3465,
+                      "src": "1785:5:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
                       }
                     },
                     "nodeType": "Assignment",
@@ -3235,25 +3189,25 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "id": 3572,
-                      "name": "_playing",
+                      "name": "_chips",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3556,
-                      "src": "1832:8:6",
+                      "referencedDeclaration": 3562,
+                      "src": "1793:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bool",
-                        "typeString": "bool"
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
                       }
                     },
-                    "src": "1822:18:6",
+                    "src": "1785:14:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
                   "id": 3574,
                   "nodeType": "ExpressionStatement",
-                  "src": "1822:18:6"
+                  "src": "1785:14:6"
                 },
                 {
                   "expression": {
@@ -3266,10 +3220,56 @@
                     "leftHandSide": {
                       "argumentTypes": null,
                       "id": 3575,
+                      "name": "playing",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3461,
+                      "src": "1822:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 3576,
+                      "name": "_playing",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3560,
+                      "src": "1832:8:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1822:18:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 3578,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1822:18:6"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 3581,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 3579,
                       "name": "turns",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3459,
+                      "referencedDeclaration": 3463,
                       "src": "1873:5:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3280,11 +3280,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 3576,
+                      "id": 3580,
                       "name": "_turns",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3560,
+                      "referencedDeclaration": 3564,
                       "src": "1881:6:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3297,14 +3297,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 3578,
+                  "id": 3582,
                   "nodeType": "ExpressionStatement",
                   "src": "1873:14:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3580,
+            "id": 3584,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3312,15 +3312,15 @@
             "name": "setValues",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3561,
+              "id": 3565,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3554,
+                  "id": 3558,
                   "name": "_winnings",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3580,
+                  "scope": 3584,
                   "src": "1621:14:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3329,7 +3329,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3553,
+                    "id": 3557,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1621:4:6",
@@ -3343,10 +3343,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3556,
+                  "id": 3560,
                   "name": "_playing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3580,
+                  "scope": 3584,
                   "src": "1636:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3355,7 +3355,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3555,
+                    "id": 3559,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1636:4:6",
@@ -3369,10 +3369,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3558,
+                  "id": 3562,
                   "name": "_chips",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3580,
+                  "scope": 3584,
                   "src": "1652:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3381,7 +3381,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3557,
+                    "id": 3561,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1652:4:6",
@@ -3395,10 +3395,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3560,
+                  "id": 3564,
                   "name": "_turns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3580,
+                  "scope": 3584,
                   "src": "1665:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3407,7 +3407,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3559,
+                    "id": 3563,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1665:4:6",
@@ -3424,12 +3424,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 3562,
+              "id": 3566,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1684:0:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "1601:316:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3437,7 +3437,7 @@
           },
           {
             "body": {
-              "id": 3597,
+              "id": 3601,
               "nodeType": "Block",
               "src": "2019:80:6",
               "statements": [
@@ -3447,11 +3447,11 @@
                     "components": [
                       {
                         "argumentTypes": null,
-                        "id": 3591,
+                        "id": 3595,
                         "name": "winnings",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3455,
+                        "referencedDeclaration": 3459,
                         "src": "2037:8:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3460,11 +3460,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3592,
+                        "id": 3596,
                         "name": "playing",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3457,
+                        "referencedDeclaration": 3461,
                         "src": "2047:7:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -3473,11 +3473,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3593,
+                        "id": 3597,
                         "name": "chips",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3461,
+                        "referencedDeclaration": 3465,
                         "src": "2056:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3486,11 +3486,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 3594,
+                        "id": 3598,
                         "name": "turns",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3459,
+                        "referencedDeclaration": 3463,
                         "src": "2063:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3498,7 +3498,7 @@
                         }
                       }
                     ],
-                    "id": 3595,
+                    "id": 3599,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -3511,15 +3511,15 @@
                       "typeString": "tuple(uint256,bool,uint256,uint256)"
                     }
                   },
-                  "functionReturnParameters": 3590,
-                  "id": 3596,
+                  "functionReturnParameters": 3594,
+                  "id": 3600,
                   "nodeType": "Return",
                   "src": "2028:41:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 3598,
+            "id": 3602,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -3527,22 +3527,22 @@
             "name": "getValues",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3581,
+              "id": 3585,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1941:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3590,
+              "id": 3594,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3583,
+                  "id": 3587,
                   "name": "_winnings",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3598,
+                  "scope": 3602,
                   "src": "1963:14:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3551,7 +3551,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3582,
+                    "id": 3586,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1963:4:6",
@@ -3565,10 +3565,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3585,
+                  "id": 3589,
                   "name": "_playing",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3598,
+                  "scope": 3602,
                   "src": "1979:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3577,7 +3577,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3584,
+                    "id": 3588,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1979:4:6",
@@ -3591,10 +3591,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3587,
+                  "id": 3591,
                   "name": "_chips",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3598,
+                  "scope": 3602,
                   "src": "1994:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3603,7 +3603,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3586,
+                    "id": 3590,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1994:4:6",
@@ -3617,10 +3617,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 3589,
+                  "id": 3593,
                   "name": "_turns",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3598,
+                  "scope": 3602,
                   "src": "2007:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3629,7 +3629,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3588,
+                    "id": 3592,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2007:4:6",
@@ -3644,14 +3644,14 @@
               ],
               "src": "1962:57:6"
             },
-            "scope": 3599,
+            "scope": 3603,
             "src": "1923:176:6",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 3600,
+        "scope": 3604,
         "src": "73:2029:6"
       }
     ],
@@ -3665,10 +3665,10 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x82adc30f34d93eec0644b42ffe3d63d2d427354b",
-      "transactionHash": "0x16ef0580edbbe6cd3e71c059f9a8f1a66cc2cc01b7f27db8d854d5d5700a660d"
+      "address": "0x8e2e9f56927f9242e8e8d7d2f4291ec6fa47d5ab",
+      "transactionHash": "0x02e28ee56f76690c7fdcf7dcb2013da051a8a4997f176a79908f99a5f021437e"
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2021-04-30T02:01:36.474Z"
+  "updatedAt": "2021-04-30T02:38:11.086Z"
 }
